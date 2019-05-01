@@ -1,0 +1,36 @@
+<div layout="row" class="container" layout-padding="20px" layout-align="center start" ng-controller="productListCtrl">
+    <div layout="column" flex="20" layout-padding="10px">
+        <span>HOME/MAN</span>
+        <div class="first-item" layout-align="center" ng-click="selectCategory()">
+            SHOP BY CATEGORIES
+        </div>
+        <div class="category-items" ng-repeat="item in data.products | orderBy:'category' | unique:'category'"
+            ng-click="selectCategory(item)" ng-class="getCategoryClass(item)">
+            {{item}}
+        </div>
+    </div>
+    <div layout="column" flex="60" class="products-container">
+        <div class="header-photo">
+            
+        </div>
+        <div class="sorting-details">
+
+        </div>
+
+        <div class="products" ng-repeat="item in data.products | filter:categoryFilterFn | range:selectedPage:pageSize">
+            <h3>
+                <strong>{{item.name}}</strong>
+                <span class="pull-right label label-primary">
+                    {{item.price | currency}}
+                </span>
+            </h3>
+            <span class="lead">{{item.description}}</span>
+        </div>
+        <div class="pagintaion-details">
+            <a ng-repeat="page in data.products | filter:categoryFilterFn | pageCount:pageSize"
+                ng-click="selectPage($index + 1)" class="btn" ng-class="getPageClass($index + 1)">
+                {{$index + 1}}
+            </a>
+        </div>
+    </div>
+</div>

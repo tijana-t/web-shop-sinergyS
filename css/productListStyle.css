@@ -1,0 +1,33 @@
+.container{
+    margin-top: 20px;
+}
+.active-class {
+    color: rgb(226, 51, 153);
+}
+.inactive-class{
+    color: black
+}
+.first-item {
+    background-color: black;
+    padding: 12px;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+}
+.category-items{
+    padding: 12px;
+    background-color: #e6e2dc;
+    outline: none;
+    cursor: pointer;
+}
+/* photo style */
+.header-photo {
+    background: url('../assets/OFFER-HERO-MD.jpg')
+}
+/* photo style */
+/* .category-items :hover{
+    border-bottom: 1px solid gray;
+    cursor: pointer;
+    color: rgb(226, 51, 153);
+} */
