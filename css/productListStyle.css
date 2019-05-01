@@ -23,7 +23,8 @@
 }
 /* photo style */
 .header-photo {
-    background: url('../assets/OFFER-HERO-MD.jpg')
+    /* background-image: url('../assets/OFFER-HERO-MD.jpg'); */
+    /* backface-visibility: visible; */
 }
 /* photo style */
 /* .category-items :hover{
