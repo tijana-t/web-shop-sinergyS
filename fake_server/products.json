@@ -2,29 +2,113 @@
     "name": "Product #1",
     "description": "A product",
     "category": "Category #1",
-    "price": 100
+    "price": 125,
+    "url":"../assets/products/product1.jpg",
+    "status":"new"
+
 },
 {
     "name": "Product #2",
     "description": "A product",
     "category": "Category #1",
-    "price": 110
+    "price": 110,
+    "url":"../assets/products/product2.jpg",
+    "status":"sold"
 },
 {
     "name": "Product #3",
     "description": "A product",
     "category": "Category #2",
-    "price": 210
+    "price": 210,
+    "url":"../assets/products/product1.jpg",
+    "status":"new"
 },
 {
     "name": "Product #4",
     "description": "A product",
     "category": "Category #3",
-    "price": 202
+    "price": 202,
+    "url":"../assets/products/product2.jpg",
+    "status":"sale"
 },
 {
     "name": "Product #5",
     "description": "A product",
     "category": "Category #5",
-    "price": 211
-}]
+    "price": 211,
+    "url":"../assets/products/produc5.jpg",
+    "status":"new"
+},
+{
+    "name": "Product #6",
+    "description": "A product",
+    "category": "Category #6",
+    "price": 211,
+    "url":"../assets/products/product6.jpg",
+    "status":"new"
+},
+{
+    "name": "Product #7",
+    "description": "A product",
+    "category": "Category #7",
+    "price": 211,
+    "url":"../assets/products/product1.jpg",
+    "status":"new"
+},
+{
+    "name": "Product #8",
+    "description": "A product",
+    "category": "Category #8",
+    "price": 211,
+    "url":"../assets/products/product8.jpg",
+    "status":"sale"
+},
+{
+    "name": "Product #9",
+    "description": "A product",
+    "category": "Category #9",
+    "price": 211,
+    "url":"../assets/products/product1.jpg",
+    "status":"new"
+},
+{
+    "name": "Product #9",
+    "description": "A product",
+    "category": "Category #9",
+    "price": 211,
+    "url":"../assets/products/product1.jpg",
+    "status":"new"
+},
+{
+    "name": "Product #10",
+    "description": "A product",
+    "category": "Category #10",
+    "price": 211,
+    "url":"../assets/products/product10.jpg",
+    "status":"sale"
+},
+{
+    "name": "Product #11",
+    "description": "A product",
+    "category": "Category #11",
+    "price": 211,
+    "url":"../assets/products/product11.jpg",
+    "status":"new"
+},
+{
+    "name": "Product #12",
+    "description": "A product",
+    "category": "Category #12",
+    "price": 211,
+    "url":"../assets/products/product1.jpg",
+    "status":"new"
+},
+{
+    "name": "Product #13",
+    "description": "A product",
+    "category": "Category #13",
+    "price": 211,
+    "url":"../assets/products/product13.jpg",
+    "status":"new"
+}
+]

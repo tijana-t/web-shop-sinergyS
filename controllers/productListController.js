@@ -1,7 +1,7 @@
 angular.module("sportsStore")
     .constant("productListActiveClass", "active-class")
     .constant("productListInactiveClass","inactive-class")
-    .constant("productListPageCount", 3)
+    .constant("productListPageCount", 10)
     // pisemo konstante da ne bi morali na vise mjesta da mijenjamo, ako dodje do neke promjene
     .controller("productListCtrl", function ($scope, $filter, 
         productListActiveClass, productListInactiveClass, productListPageCount) {
@@ -31,6 +31,12 @@ angular.module("sportsStore")
         };
         $scope.getCategoryClass = function (category) {
            return selectedCategory == category ? productListActiveClass : productListInactiveClass;
+        };
+
+        $scope.slider = 
+        {
+            value: Math.floor(Math.random() * 255),
+            min: 25
         };
         
     });

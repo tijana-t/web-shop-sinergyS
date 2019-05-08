@@ -1,0 +1,100 @@
+body,
+html {
+    background-color: white;
+}
+
+md-nav-bar.nav-bar {
+    background-color: black;
+    color: white !important;
+}
+
+md-toolbar.md-tall {
+    background-color: #f4f4f4;
+}
+
+md-nav-bar .md-button._md-nav-button.md-unselected {
+    color: #ffffff;
+}
+md-nav-bar ._md-nav-button.md-ink-ripple.md-active{
+    color: #ffffff;
+    background: #f01b48;
+}
+md-nav-bar md-nav-ink-bar {
+    background: #f01b48;
+  }
+
+.nav-item.md-nav-item :hover{
+    background: #f01b48;
+}
+
+/* header-style */
+.toolbar-data{
+    list-style-type: none;
+    text-decoration-style: none;
+    color: black;
+}
+.toolbar-data li{
+    display: inline-block;
+    font-size: 13px;
+    
+}
+select {
+    /* -webkit-appearance: none; */
+    background-color: #dddddd;
+    border: none;
+    outline: none;
+}
+.md-toolbar-tools.layout-column {
+    background-color: #dddddd;
+}
+
+/* header-style */
+
+/* app-logo */
+.app-logo h2{
+    color: black;
+    font-weight: bold;
+}
+
+/* side menu */
+.colored-title {
+    background-color: #f01b48;
+    margin-top: 40px;
+    color: white;
+}
+.box{
+    background-color: #f01b48;
+    padding: 6px;
+    margin-right: 5px;
+}
+.custom-list{
+    list-style-type: none;
+    color: gray;
+    display: contents; 
+    /* ako stavimo inline, pravi space izmedju naslova i liste */
+}
+md-slider#blue-slider.md-primary{
+    padding: 0;
+    margin: 0;
+}
+
+button.md-raised.md-primary.md-button.md-ink-ripple{
+    background-color: black !important;
+    /* min-width: 65px; */
+}
+.icon{
+    border-right: 1px solid rgba(206, 200, 200, 0.712);
+    margin-right: 3px;
+}
+.tag-wrapper{
+    border: 1px solid gray;
+    padding: 3px 6px 3px 6px;
+    margin: 2px 2px 2px 2px;
+}
+.compare-products-box{
+    border: 1px solid gray;
+    margin-top: 10px;
+}
+
+/* side manu */
+

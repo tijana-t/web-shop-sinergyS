@@ -1,36 +1,139 @@
-<div layout="row" class="container" layout-padding="20px" layout-align="center start" ng-controller="productListCtrl">
-    <div layout="column" flex="20" layout-padding="10px">
-        <span>HOME/MAN</span>
-        <div class="first-item" layout-align="center" ng-click="selectCategory()">
-            SHOP BY CATEGORIES
-        </div>
-        <div class="category-items" ng-repeat="item in data.products | orderBy:'category' | unique:'category'"
-            ng-click="selectCategory(item)" ng-class="getCategoryClass(item)">
-            {{item}}
-        </div>
-    </div>
-    <div layout="column" flex="60" class="products-container">
-        <div class="header-photo">
-            
-        </div>
-        <div class="sorting-details">
+<div layout="column" layout-align="start start">
+    <span>HOME/MAN</span>
+    <div layout="row" class="container" layout-padding="20px" layout-align="center start"
+        ng-controller="productListCtrl">
 
-        </div>
-
-        <div class="products" ng-repeat="item in data.products | filter:categoryFilterFn | range:selectedPage:pageSize">
-            <h3>
-                <strong>{{item.name}}</strong>
-                <span class="pull-right label label-primary">
-                    {{item.price | currency}}
+        <div class="left-container" layout="column" flex="20" layout-padding="10px">
+            <div class="first-item" layout="row" layout-align="center center" ng-click="selectCategory()">
+                <i class="material-icons">
+                    menu
+                </i>
+                <span>
+                    SHOP BY CATEGORIES
                 </span>
-            </h3>
-            <span class="lead">{{item.description}}</span>
+            </div>
+            <div class="category-items" ng-repeat="item in data.products | orderBy:'category' | unique:'category'"
+                ng-click="selectCategory(item)" ng-class="getCategoryClass(item)">
+                {{item}}
+            </div>
+            <div class="colored-title shop-by" layout="row" layout-align="start center">
+                <div class="icon">
+                    <i class="material-icons"> bookmark </i>
+                </div>
+                <span>
+                    SHOP BY
+                </span>
+            </div>
+            <div class="manufacturer" layout="column" layout-align="center start">
+                <div layout="row" layout-align="center center">
+                    <span class="box"></span>
+                    <span>MANUFACTURER</span>
+                </div>
+                <div>
+                    <ul class="custom-list">
+                        <li>Adidas (15)</li>
+                        <li>Nike (12)</li>
+                        <li>Converse (9)</li>
+                        <li>Winex (6)</li>
+                        <li>Yonex (4)</li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="price" layout="column" layout-align="center start">
+                <div layout="row" layout-align="center center">
+                    <span class="box"></span>
+                    <span>PRICE</span>
+                </div>
+            </div>
+            <md-slider ng-model="slider.value" min="25" max="500" aria-label="blue" id="blue-slider" class="md-primary">
+            </md-slider>
+            <div layout="row" layout-align="center center">
+                <input flex="25" type="number" ng-model="slider.min" maxlength="3" size="1" aria-label="price-min"
+                    aria-controls="price-min">
+                <span flex="10">
+                    < </span> <input flex="25" type="number" maxlength="3" size="1" ng-model="slider.value"
+                        aria-label="blue" aria-controls="blue-slider">
+                        <md-button class="md-raised md-primary">Search</md-button>
+            </div>
+
+            <div class="color" layout="column" layout-align="center start">
+                <div layout="row" layout-align="center center">
+                    <span class="box"></span>
+                    <span>COLOR</span>
+                </div>
+                <div>
+                    <ul class="custom-list">
+                        <li>Black (15)</li>
+                        <li>White (12)</li>
+                        <li>Blue (9)</li>
+                        <li>Purple (6)</li>
+                        <li>Yellow (4)</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="colored-title popular-tags" ng-style="{'width':'100%'}" layout="row"
+                layout-align="start center">
+                <div class="icon">
+                    <i class="material-icons"> bookmark </i>
+                </div>
+                <span>
+                    POPULAR TAGS
+                </span>
+            </div>
+            <div class="tags" layout="row" layout-wrap>
+                <span class="tag-wrapper"> Shoes </span>
+                <span class="tag-wrapper"> Women </span>
+                <span class="tag-wrapper"> Men </span>
+                <span class="tag-wrapper"> Clothing </span>
+                <span class="tag-wrapper"> Veneno </span>
+                <span class="tag-wrapper"> Black </span>
+                <span class="tag-wrapper"> White </span>
+                <span class="tag-wrapper"> Sport's </span>
+            </div>
+
+            <div class="colored-title compare-products" ng-style="{'width':'100%'}" layout="row"
+                layout-align="start center">
+                <div class="icon">
+                    <i class="material-icons"> bookmark </i>
+                </div>
+                <span>
+                    COMPARE PRODUCTS
+                </span>
+            </div>
+            <div class="compare-products-box">
+                You have no items to compare
+            </div>
         </div>
-        <div class="pagintaion-details">
-            <a ng-repeat="page in data.products | filter:categoryFilterFn | pageCount:pageSize"
-                ng-click="selectPage($index + 1)" class="btn" ng-class="getPageClass($index + 1)">
-                {{$index + 1}}
-            </a>
+        <div layout="column" flex="60" class="products-container right-container">
+            <div class="header-photo">
+
+            </div>
+            <div class="sorting-details">
+
+            </div>
+
+            <div class="products" layout-wrap layout-padding="10" layout="row" layout-align="center center">
+                <div ng-repeat="item in data.products | filter:categoryFilterFn | range:selectedPage:pageSize">
+                    <div class="photo-container" layout="column">
+                        <span class="data-badge">{{item.status}}</span>
+                        <img ng-src="{{item.url}}" class="product-image" alt="product1">
+                        <span>{{item.name}}</span>
+                        <span>{{item.description}}</span>
+                        <strong>{{item.price | currency}}</strong>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pagintaion-details">
+                <a ng-repeat="page in data.products | filter:categoryFilterFn | pageCount:pageSize"
+                    ng-click="selectPage($index + 1)" class="btn" ng-class="getPageClass($index + 1)">
+                    {{$index + 1}}
+                </a>
+            </div>
         </div>
     </div>
+
 </div>
