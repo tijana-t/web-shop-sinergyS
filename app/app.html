@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+
+        <!-- <base href="/app/"> -->
+
+    
+    <title>SportsStore</title>
+    <link rel="stylesheet" href="../bower_components/angular-material/angular-material.min.css">
+    <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+    <!-- <link rel="stylesheet" href="/css/productListStyle.css"> -->
+    <link rel="stylesheet" href="../css/app.css">
+    <link rel="stylesheet" href="../css/productListStyle.css">
+
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-animate/angular-animate.js"></script>
+    <script src="../bower_components/angular-material/angular-material.js"></script>
+    <script src="../bower_components/angular-aria/angular-aria.js"></script>
+    <script src="../bower_components/angular-route/angular-route.js"></script>
+
+    <script src="./app.module.js"></script>
+    <script src="../app/filters/custom-filters.js"></script>
+    <script src="../app/services/data.service.js"> </script>
+    <script src="../app/components/product-list/product-list.controller.js"></script>
+    <script src="../app/components/product-details/product-details.controller.js"></script>
+    <script src="./route-config.js"></script>
+    <!-- <script src="/app/components/product-list/sportsStore.js"></script> -->
+    <!-- samo za privremeno, mozda mi uopste ne treba ovaj glavni kontroler -->
+
+
+</head>
+
+<body>
+    <div layout="column" layout-fill>
+        <ng-include src="'./components/layout/header/header.html'"></ng-include>
+        <md-content>
+            <ng-view />
+        </md-content>
+        <ng-include src="'./components/layout/footer/footer.html'"></ng-include>
+    </div>
+</body>
+
+</html>

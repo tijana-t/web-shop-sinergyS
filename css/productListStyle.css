@@ -35,7 +35,7 @@
 .header-photo {
     height: 200px;
     background-size:cover; 
-    background-image: url('../assets/cover.jpg');
+    background-image: url('/app/assets/cover.jpg');
 }
 /* photo style */
 
@@ -60,6 +60,16 @@
       font-size: 15px;
       padding: 3px 13px 3px 13px;
   }
+
+  .item-price{
+      color: #15d1af;
+
+  }
+  .photo-container .item-name,.photo-container .item-price{
+      width: 100%;
+      border-bottom: 1px solid rgba(128, 128, 128, 0.514);
+      text-align: center;
+  } 
 /* product badge */
 
 

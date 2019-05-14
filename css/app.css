@@ -7,6 +7,11 @@ md-nav-bar.nav-bar {
     background-color: black;
     color: white !important;
 }
+.md-nav-bar{
+    width: 70%;
+    /* justify-content: start;
+    align-items: center; */
+}
 
 md-toolbar.md-tall {
     background-color: #f4f4f4;
@@ -32,6 +37,7 @@ md-nav-bar md-nav-ink-bar {
     list-style-type: none;
     text-decoration-style: none;
     color: black;
+    padding: 0;
 }
 .toolbar-data li{
     display: inline-block;
@@ -44,13 +50,18 @@ select {
     border: none;
     outline: none;
 }
-.md-toolbar-tools.layout-column {
+.info-first {
     background-color: #dddddd;
+}
+
+.info-second{
+    /* width: 100%; */
 }
 
 /* header-style */
 
 /* app-logo */
+
 .app-logo h2{
     color: black;
     font-weight: bold;
@@ -97,4 +108,26 @@ button.md-raised.md-primary.md-button.md-ink-ripple{
 }
 
 /* side manu */
+
+/* footer style */
+/* .footer-image{
+    height: auto;
+    width: 30px;
+} */
+
+footer{
+    background-color: #eee;
+}
+.social-media-icons{
+    width: 35px;
+    height: 35px;
+    margin: 1px !important;
+}
+.connect-with-us{
+    border-bottom: white;
+}
+.black-footer{
+    background-color: black;
+}
+/* footer style */
 

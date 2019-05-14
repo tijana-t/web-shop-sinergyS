@@ -1,0 +1,63 @@
+<md-toolbar class="md-tall" layout="column">
+    <div class="info-first" layout="row" layout-align="center center">
+        <div layout="row" flex="70" layout-align="space-between center">
+            <div class="left-nav">
+                <ul class="toolbar-data">
+                    <li>
+                        <select>
+                            <option value="usd">USD</option>
+                            <option value="din">DIN</option>
+                            <option value="usd" selected>USD</option>
+                        </select>
+                    </li>
+                    <li>
+                        <select>
+                            <!-- <option ng-repeat="language in data.header.languages" 
+                                    value="{{language.name}}">{{language.name | capitalcase}}</option> -->
+                            <option value="german">german</option>
+                            <option value="italian">Italian</option>
+                            <option value="serbian">Serbian</option>
+                            <option value="english" selected>English</option>
+                        </select>
+                    </li>
+                </ul>
+            </div>
+            <div class="right-nav">
+                <ul class="toolbar-data">
+                    <li>Account</li>
+                    <li>Wishlist</li>
+                    <li>Checkout</li>
+                    <li>Log In</li>
+                    <li>Sign Up</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <div class="info-second" layout="row" layout-align="center center">
+        <div layout="row" flex="70" layout-align="space-between center">
+            <div class="app-logo" layout="row" layout-align="center center">
+                <img src="assets/logo.gif" alt="logo">
+                <h2>VENENO</h2>
+            </div>
+            <div class="search-box">
+
+            </div>
+
+            <md-button>
+                Right Bar Button
+            </md-button>
+        </div>
+
+    </div>
+</md-toolbar>
+
+<md-nav-bar class="nav-bar" layout-sm="column" layout="row" layout-align="center center" aria-label="navigation"
+    md-selected-nav-item="currentNavItem">
+    <md-nav-item class="nav-item" md-nav-href="#/products" name="products">Home</md-nav-item>
+    <md-nav-item class="nav-item" md-nav-href="#" name="details">Men's</md-nav-item>
+    <md-nav-item class="nav-item" md-nav-href="#" name="page3"> Women's </md-nav-item>
+    <md-nav-item class="nav-item" md-nav-href="#" name="page4"> Sports </md-nav-item>
+    <md-nav-item class="nav-item" md-nav-href="#" name="page5"> About Us </md-nav-item>
+    <md-nav-item class="nav-item" md-nav-href="#" name="page6"> Custom </md-nav-item>
+</md-nav-bar>

@@ -1,10 +1,9 @@
 <div layout="column" layout-align="start start">
     <span>HOME/MAN</span>
-    <div layout="row" class="container" layout-padding="20px" layout-align="center start"
-        ng-controller="productListCtrl">
+    <div layout="row" class="container" layout-padding="20px" layout-align="center start">
 
         <div class="left-container" layout="column" flex="20" layout-padding="10px">
-            <div class="first-item" layout="row" layout-align="center center" ng-click="selectCategory()">
+            <div class="first-item" layout="row" layout-align="center center" ng-click="vm.selectCategory()">
                 <i class="material-icons">
                     menu
                 </i>
@@ -12,9 +11,9 @@
                     SHOP BY CATEGORIES
                 </span>
             </div>
-            <div class="category-items" ng-repeat="item in data.products | orderBy:'category' | unique:'category'"
-                ng-click="selectCategory(item)" ng-class="getCategoryClass(item)">
-                {{item}}
+            <div class="category-items" ng-repeat="product in vm.products | orderBy:'category' | unique:'category'"
+                ng-click="vm.selectCategory(product)" ng-class="vm.getCategoryClass(product)">
+                {{product}}
             </div>
             <div class="colored-title shop-by" layout="row" layout-align="start center">
                 <div class="icon">
@@ -116,20 +115,22 @@
             </div>
 
             <div class="products" layout-wrap layout-padding="10" layout="row" layout-align="center center">
-                <div ng-repeat="item in data.products | filter:categoryFilterFn | range:selectedPage:pageSize">
-                    <div class="photo-container" layout="column">
-                        <span class="data-badge">{{item.status}}</span>
-                        <img ng-src="{{item.url}}" class="product-image" alt="product1">
-                        <span>{{item.name}}</span>
-                        <span>{{item.description}}</span>
-                        <strong>{{item.price | currency}}</strong>
+                <div ng-repeat="product in vm.products | filter: vm.categoryFilterFn | range: vm.selectedPage:vm.pageSize">
+                    <a href="#/products/{{product.id}}">
+                    <div class="photo-container" layout="column" layout-align="center center">
+                        <span class="data-badge">{{product.status}}</span>
+                        <img ng-src="{{product.url}}" class="product-image" alt="product1">
+                        <span class="item-name">{{product.name}}</span>
+                        <!-- <span>{{item.description}}</span> -->
+                        <strong class="item-price">{{product.price | currency}}</strong>
                     </div>
+                    </a>
                 </div>
             </div>
 
             <div class="pagintaion-details">
-                <a ng-repeat="page in data.products | filter:categoryFilterFn | pageCount:pageSize"
-                    ng-click="selectPage($index + 1)" class="btn" ng-class="getPageClass($index + 1)">
+                <a ng-repeat="page in vm.products | filter:vm.categoryFilterFn | pageCount:vm.pageSize"
+                    ng-click="vm.selectPage($index + 1)" class="btn" ng-class="vm.getPageClass($index + 1)">
                     {{$index + 1}}
                 </a>
             </div>

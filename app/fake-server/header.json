@@ -1,0 +1,36 @@
+{
+    "languages": [{
+            "name": "english"
+        },
+        {
+            "name": "italian"
+        },
+        {
+            "name": "german"
+        },
+        {
+            "name": "serbian"
+        }
+    ],
+    "currency": [{
+        "name": "usd"
+    }, {
+        "name": "eur"
+    }, {
+        "name": "din"
+    }],
+    
+    "menuItems": [{
+        "name": "home"
+    }, {
+        "name": "men's"
+    }, {
+        "name": "women's"
+    }, {
+        "name": "sports"
+    }, {
+        "name": "about us"
+    }, {
+        "name": "custom"
+    }]
+}
