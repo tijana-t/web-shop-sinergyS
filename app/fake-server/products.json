@@ -1,128 +1,176 @@
 [{
-    "id":"1",
-    "name": "Product #1",
-    "description": "A product",
-    "category": "Category #1",
-    "price": 125,
-    "url":"assets/products/product1.jpg",
-    "status":"new"
+        "id": "1",
+        "name": "Product #1",
+        "description": "A product",
+        "category": "Category #1",
+        "price": 125,
+        "url": "assets/products/product1.jpg",
+        "status": "new",
+        "manufacturer": "adidas",
+        "color": "black",
+        "tags": ["shoes", "women", "clothing"]
+    },
+    {
+        "id": "2",
+        "name": "Product #2",
+        "description": "A product",
+        "category": "Category #1",
+        "price": 110,
+        "url": "assets/products/product2.jpg",
+        "status": "sold",
+        "manufacturer": "adidas",
+        "color": "black",
+        "tags": ["shoes", "women", "clothing"]
+    },
+    {
+        "id": "3",
+        "name": "Product #3",
+        "description": "A product",
+        "category": "Category #2",
+        "price": 210,
+        "url": "assets/products/product1.jpg",
+        "status": "new",
+        "manufacturer": "adidas",
+        "color": "black",
+        "tags": ["shoes", "women", "clothing"]
+    },
+    {
+        "id": "4",
+        "name": "Product #4",
+        "description": "A product",
+        "category": "Category #3",
+        "price": 202,
+        "url": "assets/products/product2.jpg",
+        "status": "sale",
+        "manufacturer": "adidas",
+        "color": "white",
+        "tags": ["shoes", "women", "clothing"]
+    },
+    {
+        "id": "5",
+        "name": "Product #5",
+        "description": "A product",
+        "category": "Category #5",
+        "price": 211,
+        "url": "assets/products/produc5.jpg",
+        "status": "new",
+        "manufacturer": "adidas",
+        "color": "white",
+        "tags": ["shoes", "women", "clothing"]
+    },
+    {
+        "id": "6",
+        "name": "Product #6",
+        "description": "A product",
+        "category": "Category #6",
+        "price": 211,
+        "url": "assets/products/product6.jpg",
+        "status": "new",
+        "manufacturer": "adidas",
+        "color": "white",
+        "tags":["shoes","women","clothing"]    },
+    {
+        "id": "7",
+        "name": "Product #7",
+        "description": "A product",
+        "category": "Category #7",
+        "price": 211,
+        "url": "assets/products/product1.jpg",
+        "status": "new",
+        "manufacturer": "adidas",
+        "color": "white",
+        "tags": ["shoes", "women", "clothing"]
+    },
+    {
+        "id": "8",
+        "name": "Product #8",
+        "description": "A product",
+        "category": "Category #8",
+        "price": 211,
+        "url": "assets/products/product8.jpg",
+        "status": "sale",
+        "manufacturer": "winex",
+        "color": "white",
+        "tags": ["shoes", "women", "clothing"]
 
-},
-{
-    "id":"2",
-    "name": "Product #2",
-    "description": "A product",
-    "category": "Category #1",
-    "price": 110,
-    "url":"assets/products/product2.jpg",
-    "status":"sold"
-},
-{
-    "id":"3",
-    "name": "Product #3",
-    "description": "A product",
-    "category": "Category #2",
-    "price": 210,
-    "url":"assets/products/product1.jpg",
-    "status":"new"
-},
-{
-    "id":"4",
-    "name": "Product #4",
-    "description": "A product",
-    "category": "Category #3",
-    "price": 202,
-    "url":"assets/products/product2.jpg",
-    "status":"sale"
-},
-{
-    "id":"5",
-    "name": "Product #5",
-    "description": "A product",
-    "category": "Category #5",
-    "price": 211,
-    "url":"assets/products/produc5.jpg",
-    "status":"new"
-},
-{
-    "id":"6",
-    "name": "Product #6",
-    "description": "A product",
-    "category": "Category #6",
-    "price": 211,
-    "url":"assets/products/product6.jpg",
-    "status":"new"
-},
-{
-    "id":"7",
-    "name": "Product #7",
-    "description": "A product",
-    "category": "Category #7",
-    "price": 211,
-    "url":"assets/products/product1.jpg",
-    "status":"new"
-},
-{
-    "id":"8",
-    "name": "Product #8",
-    "description": "A product",
-    "category": "Category #8",
-    "price": 211,
-    "url":"assets/products/product8.jpg",
-    "status":"sale"
-},
-{
-    "id":"9",
-    "name": "Product #9",
-    "description": "A product",
-    "category": "Category #9",
-    "price": 211,
-    "url":"assets/products/product1.jpg",
-    "status":"new"
-},
-{
-    "id":"10",
-    "name": "Product #9",
-    "description": "A product",
-    "category": "Category #9",
-    "price": 211,
-    "url":"assets/products/product1.jpg",
-    "status":"new"
-},
-{
-    "id":"11",
-    "name": "Product #10",
-    "description": "A product",
-    "category": "Category #10",
-    "price": 211,
-    "url":"assets/products/product10.jpg",
-    "status":"sale"
-},
-{
-    "id":"12",
-    "name": "Product #11",
-    "description": "A product",
-    "category": "Category #11",
-    "price": 211,
-    "url":"assets/products/product11.jpg",
-    "status":"new"
-},
-{
-    "id":"13",
-    "name": "Product #12",
-    "description": "A product",
-    "category": "Category #12",
-    "price": 211,
-    "url":"assets/products/product1.jpg",
-    "status":"new"
-},
-{
-    "id":"14",
-    "name": "Product #13",
-    "description": "A product",
-    "category": "Category #13",
-    "price": 211,
-    "url":"assets/products/product13.jpg",
-    "status":"new"
-}
+    },
+    {
+        "id": "9",
+        "name": "Product #9",
+        "description": "A product",
+        "category": "Category #9",
+        "price": 211,
+        "url": "assets/products/product1.jpg",
+        "status": "new",
+        "manufacturer": "NIKE",
+        "color": "white",
+        "tags": ["shoes", "women", "clothing"]
+
+    },
+    {
+        "id": "10",
+        "name": "Product #9",
+        "description": "A product",
+        "category": "Category #9",
+        "price": 211,
+        "url": "assets/products/product1.jpg",
+        "status": "new",
+        "manufacturer": "NIKE",
+        "color": "white",
+        "tags": ["shoes", "women", "clothing"]
+
+    },
+    {
+        "id": "11",
+        "name": "Product #10",
+        "description": "A product",
+        "category": "Category #10",
+        "price": 211,
+        "url": "assets/products/product10.jpg",
+        "status": "sale",
+        "manufacturer": "nike",
+        "color": "white",
+        "tags": ["shoes", "women", "clothing"]
+
+    },
+    {
+        "id": "12",
+        "name": "Product #11",
+        "description": "A product",
+        "category": "Category #11",
+        "price": 211,
+        "url": "assets/products/product11.jpg",
+        "status": "new",
+        "manufacturer": "converse",
+        "color": "yellow",
+        "tags": ["shoes", "women", "clothing"]
+
+    },
+    {
+        "id": "13",
+        "name": "Product #12",
+        "description": "A product",
+        "category": "Category #12",
+        "price": 211,
+        "url": "assets/products/product1.jpg",
+        "status": "new",
+        "manufacturer": "adidas",
+        "color": "blue",
+        "tags": ["shoes", "women", "clothing"]
+
+
+    },
+    {
+        "id": "14",
+        "name": "Product #13",
+        "description": "A product",
+        "category": "Category #13",
+        "price": 211,
+        "url": "assets/products/product13.jpg",
+        "status": "new",
+        "manufacturer": "converse",
+        "color": "white",
+        "tags": ["shoes", "women", "clothing"]
+
+    }
 ]

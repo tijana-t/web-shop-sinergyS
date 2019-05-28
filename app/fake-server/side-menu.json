@@ -1,0 +1,73 @@
+{
+    "manufacturer": [{
+            "name": "adidas",
+            "value": "15"
+        },
+        {
+            "name": "nike",
+            "value": "15"
+
+        },
+        {
+            "name": "converse",
+            "value": "17"
+
+        },
+        {
+            "name": "wilson",
+            "value": "11"
+
+        },
+        {
+            "name": "yonex",
+            "value": "10"
+
+        }
+    ],
+    "color": [{
+        "name": "black",
+        "value": "20"
+    },
+    {
+        "name": "white",
+        "value": "21"
+
+    },
+    {
+        "name": "blue",
+        "value": "17"
+
+    },
+    {
+        "name": "red",
+        "value": "11"
+
+    },
+    {
+        "name": "green",
+        "value": "10"
+
+    }],
+
+    "tags": [{
+        "name": "shoes"
+    }, {
+        "name": "women"
+
+    }, {
+        "name": "men"
+
+    }, {
+        "name": "boy"
+    }, {
+        "name": "clothing"
+    }, {
+        "name": "men's"
+    },{
+        "name": "veneno"
+    },{
+        "name": "black"
+    },{
+        "name": "fashion"
+    }]
+}

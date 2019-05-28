@@ -19,18 +19,42 @@
     }, {
         "name": "din"
     }],
-    
+
     "menuItems": [{
-        "name": "home"
+        "name": "home",
+        "route": "products"
     }, {
-        "name": "men's"
+        "name": "men's",
+        "route": "men"
+
     }, {
-        "name": "women's"
+        "name": "women's",
+        "route": "women"
+
     }, {
-        "name": "sports"
+        "name": "sports",
+        "route": "sport"
+
     }, {
-        "name": "about us"
+        "name": "about us",
+        "route": "about"
+
     }, {
-        "name": "custom"
+        "name": "custom",
+        "route": "custom"
+    }],
+    
+    "rightNav": [{
+        "name": "account"
+    }, {
+        "name": "wishlist"
+    }, {
+        "name": "checkout"
+    }, {
+        "name": "log in"
+    }, {
+        "name": "account"
+    }, {
+        "name": "sign up"
     }]
 }

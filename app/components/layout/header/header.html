@@ -1,34 +1,27 @@
-<md-toolbar class="md-tall" layout="column">
+<md-toolbar class="md-tall" layout="column" ng-controller="HeaderController as vm">
     <div class="info-first" layout="row" layout-align="center center">
         <div layout="row" flex="70" layout-align="space-between center">
             <div class="left-nav">
                 <ul class="toolbar-data">
                     <li>
                         <select>
-                            <option value="usd">USD</option>
-                            <option value="din">DIN</option>
-                            <option value="usd" selected>USD</option>
+                            <option ng-repeat="currency in vm.header.currency" value="{{currency.name}}">
+                                {{currency.name | uppercase}}
+                            </option>
                         </select>
                     </li>
                     <li>
                         <select>
-                            <!-- <option ng-repeat="language in data.header.languages" 
-                                    value="{{language.name}}">{{language.name | capitalcase}}</option> -->
-                            <option value="german">german</option>
-                            <option value="italian">Italian</option>
-                            <option value="serbian">Serbian</option>
-                            <option value="english" selected>English</option>
+                            <option ng-repeat="language in vm.header.languages" value="{{language.name}}">
+                                {{language.name | capitalize}}
+                            </option>
                         </select>
                     </li>
                 </ul>
             </div>
             <div class="right-nav">
                 <ul class="toolbar-data">
-                    <li>Account</li>
-                    <li>Wishlist</li>
-                    <li>Checkout</li>
-                    <li>Log In</li>
-                    <li>Sign Up</li>
+                    <li ng-repeat="item in vm.header.rightNav">{{ item.name | capitalize}}</li>
                 </ul>
             </div>
         </div>
@@ -40,13 +33,30 @@
                 <img src="assets/logo.gif" alt="logo">
                 <h2>VENENO</h2>
             </div>
-            <div class="search-box">
-
+            <div class="search-box" layout-padding="1px" layout="row" layout-align="space-between center">
+                <div class="category">
+                    <select ng-model="vm.categoryChanged" ng-change="vm.onCategoryChange(vm.categoryChanged)">
+                        <option value="">All categories</option>
+                        <option ng-repeat="category in vm.products | unique:'category'" value="{{category}}">
+                            {{category | uppercase}}
+                        </option>
+                    </select>
+                </div>
+                <div class="search-product">
+                    <input ng-model="vm.search" ng-change="vm.onSearch(vm.search)" placeholder="Search here">
+                    </input>
+                </div>
+                <div class="icon" layout="row" layout-align="center center">
+                    <i class="material-icons">
+                        search
+                    </i>
+                </div>
             </div>
 
-            <md-button>
-                Right Bar Button
-            </md-button>
+            <div class="cart-items" layout="row" layout-align="center center">
+                <img src="assets/cart.png" alt="">
+                <spam>MY CART: 00 ITEM </spam>
+            </div>
         </div>
 
     </div>
@@ -54,6 +64,8 @@
 
 <md-nav-bar class="nav-bar" layout-sm="column" layout="row" layout-align="center center" aria-label="navigation"
     md-selected-nav-item="currentNavItem">
+    <!-- <md-nav-item class="nav-item" ng-repeat="item in vm.header.menuItems" 
+    md-nav-href="#" name="item.name"> {{item.name | capitalize}} </md-nav-item> -->
     <md-nav-item class="nav-item" md-nav-href="#/products" name="products">Home</md-nav-item>
     <md-nav-item class="nav-item" md-nav-href="#" name="details">Men's</md-nav-item>
     <md-nav-item class="nav-item" md-nav-href="#" name="page3"> Women's </md-nav-item>

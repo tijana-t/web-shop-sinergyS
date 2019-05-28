@@ -9,6 +9,14 @@ angular
         vm.product = {};
         vm.id = $routeParams.id;
 
+     vm.breadcrumb = [{
+            name: 'home',
+            url: '/products'
+        }, {
+            name: 'product details',
+            url: '/products/'
+        }];
+
         activate();
 
         function activate() {

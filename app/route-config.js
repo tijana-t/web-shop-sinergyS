@@ -19,13 +19,15 @@ function config($routeProvider, $locationProvider) {
         .when('/products/:id', {
             templateUrl: './components/product-details/product-details.html',
             controller: 'ProductDetailsController',
-            controllerAs: 'vm'
+            controllerAs: 'vm',
+            css:'scss/product-details.scss'
         });
     $routeProvider
         .otherwise({
             templateUrl: "./components/product-list/product-list.html",
             controller: 'ProductListController',
             controllerAs: 'vm',
+            css:'scss/product-list.scss'
         });
 
     
@@ -33,19 +35,3 @@ function config($routeProvider, $locationProvider) {
 
 
 }
-
-
-// ]).config(function ($routeProvider) {
-//     $routeProvider.when("/details", {
-//         templateUrl: "/views/productDetails.html",
-//     });
-//     $routeProvider.when("/products", {
-//         templateUrl: "/views/productList.html"
-//     });
-//     $routeProvider.otherwise({
-//         templateUrl: "/views/productList.html"
-//     });
-// })
-// .config(['$locationProvider', function ($locationProvider) {
-//     $locationProvider.hashPrefix('');
-// }]);

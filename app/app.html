@@ -3,19 +3,20 @@
 
 <head>
 
-        <!-- <base href="/app/"> -->
+    <!-- <base href="/app/"> -->
 
-    
+
     <title>SportsStore</title>
     <link rel="stylesheet" href="../bower_components/angular-material/angular-material.min.css">
     <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="../bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-
-    <!-- <link rel="stylesheet" href="/css/productListStyle.css"> -->
-    <link rel="stylesheet" href="../css/app.css">
-    <link rel="stylesheet" href="../css/productListStyle.css">
+    <link rel="stylesheet" href="../app/css/app.css">
+    <link rel="stylesheet" href="../app/css/footer.css">
+    <link rel="stylesheet" href="../app/css/header.css">
+    <link rel="stylesheet" href="../app/css/product-details.css">
+    <link rel="stylesheet" href="../app/css/product-list.css">
 
     <script src="../bower_components/angular/angular.js"></script>
     <script src="../bower_components/angular-animate/angular-animate.js"></script>
@@ -23,24 +24,41 @@
     <script src="../bower_components/angular-aria/angular-aria.js"></script>
     <script src="../bower_components/angular-route/angular-route.js"></script>
 
+    <link rel="stylesheet" href="../bower_components/slick-carousel/slick/slick.css">
+    <link rel="stylesheet" href="../bower_components/slick-carousel/slick/slick-theme.css">
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/slick-carousel/slick/slick.js"></script>
+    <script src="../bower_components/angular-slick/dist/slick.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../bower_components/angularjs-slider/dist/rzslider.css" />
+    <script src="../bower_components/angularjs-slider/dist/rzslider.min.js"></script>
+
     <script src="./app.module.js"></script>
     <script src="../app/filters/custom-filters.js"></script>
     <script src="../app/services/data.service.js"> </script>
+    <script src="../app/components/layout/footer/footer.controller.js"></script>
+    <script src="../app/components/layout/header/header.controller.js"></script>
     <script src="../app/components/product-list/product-list.controller.js"></script>
     <script src="../app/components/product-details/product-details.controller.js"></script>
     <script src="./route-config.js"></script>
+    <script src="./directives/breadcrumb/breadcrumb.directive.js"></script>
     <!-- <script src="/app/components/product-list/sportsStore.js"></script> -->
     <!-- samo za privremeno, mozda mi uopste ne treba ovaj glavni kontroler -->
+
+
 
 
 </head>
 
 <body>
     <div layout="column" layout-fill>
-        <ng-include src="'./components/layout/header/header.html'"></ng-include>
-        <md-content>
-            <ng-view />
-        </md-content>
+        <section>
+            <ng-include src="'./components/layout/header/header.html'"></ng-include>
+            <md-content>
+                <ng-view />
+            </md-content>
+        </section>
+
         <ng-include src="'./components/layout/footer/footer.html'"></ng-include>
     </div>
 </body>

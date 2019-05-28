@@ -1,16 +1,14 @@
-<!-- <footer layout layout-padding="20px" layout-align="center center">
-    <div class="footer-wrapper" layout="row" layout-align="start start" flex="70">
+ <footer layout layout-padding="20px" layout-align="center center">
+    <div ng-controller="FooterController as vm" class="footer-wrapper" layout="row" layout-align="start start" flex="70">
         <div class="left-footer" layout="column" flex="30">
             <div class="about-us" layout="column" layout-padding="10px">
                 <span class="title-about-us">ABOUT US</span>
-                <span>Lorem ipsum, dolor sit amet consectetur adipisicing e
-                    lit. Neque, alias veritatis. Tempore culpa ut autem!
-                </span>
-                <span>+38269567213</span>
-                <span>ttomic152@gmail.com</span>
+                <span>{{vm.footer.about.description}}</span>
+                <span>{{vm.footer.about.phone}}</span>
+                <span>{{vm.footer.about.email}}</span>
             </div>
             <div class="footer-image" layout-fill>
-                <img width="250px" height="130px" src="assets/footer-city.jpg" alt="city">
+                <img width="250px" height="130px" ng-src="{{vm.footer.about.image-url}}" alt="city">
             </div>
         </div>
         <div class="right-footer" layout="column" layout-align="start center">
@@ -59,10 +57,9 @@
                         <span>INFORMATION</span>
                     </div>
                     <ul class="custom-list">
-                        <li>About Us</li>
-                        <li>Contact us</li>
-                        <li>Terms & Conditions</li>
-                        <li>Privacy Policy</li>
+                        <li ng-repeat="item in vm.footer.information">
+                            {{ item.name }}
+                        </li>
                     </ul>
 
                 </div>
@@ -72,10 +69,9 @@
                         <span>WHY BUY FROM US</span>
                     </div>
                     <ul class="custom-list">
-                        <li>About Us</li>
-                        <li>Contact us</li>
-                        <li>Terms & Conditions</li>
-                        <li>Privacy Policy</li>
+                        <li ng-repeat="item in vm.footer.buyFromUs">
+                            {{ item.name }}
+                        </li>
                     </ul>
                 </div>
                 <div class="info">
@@ -84,10 +80,9 @@
                         <span>MY ACCOUNT</span>
                     </div>
                     <ul class="custom-list">
-                        <li>About Us</li>
-                        <li>Contact us</li>
-                        <li>Terms & Conditions</li>
-                        <li>Privacy Policy</li>
+                        <li ng-repeat="item in vm.footer.account">
+                            {{ item.name }}
+                        </li>
                     </ul>
                 </div>
                 <div class="info">
@@ -96,17 +91,16 @@
                         <span>USEFUL LINKS</span>
                     </div>
                     <ul class="custom-list">
-                        <li>About Us</li>
-                        <li>Contact us</li>
-                        <li>Terms & Conditions</li>
-                        <li>Privacy Policy</li>
+                            <li ng-repeat="item in vm.footer.links">
+                                    {{ item.name }}
+                            </li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
 
-     <div class="black-footer footer-copyright">
+     <!-- <div class="black-footer footer-copyright">
         <span>&copy 2014 Copyright by Plazatheme. All rights Reserved. </span>
-    </div>  
-</footer>  -->
+    </div>   -->
+</footer>  

@@ -1,0 +1,54 @@
+{
+    "about":
+        {
+            "description": "This is Tijana's first angularJs website.",
+            "phone": "+38269567213",
+            "email": "ttomic152@gmail.com",
+            "image-url": "../assets/footer-city.jpg"
+        },
+
+        "information": [{
+            "name": "About us"
+        }, {
+            "name": "Contact us"
+        }, {
+            "name": "Terms & Conditions"
+        }, {
+            "name": "Privacy Policy"
+        }],
+
+        "buyFromUs": [{
+            "name": "Product Recall"
+        }, {
+            "name": "Gift Vouchers"
+
+        }, {
+            "name": "Returns and Exchanges"
+
+        }, {
+            "name": "Shipping ",
+            "route": "sport"
+        }],
+
+        "account": [{
+            "name": "Sign In"
+        }, {
+            "name": "View Cart"
+        }, {
+            "name": "My Wishlist"
+        }, {
+            "name": "Check Out"
+        }],
+
+        "links": [{
+                "name": "Pricing Policy"
+            },
+            {
+                "name": "Shipping Policy"
+            }, {
+                "name": "Payment Methods"
+            }, {
+                "name": "Site Information"
+            }
+        ]
+    }
