@@ -1,5 +1,5 @@
  <footer layout layout-padding="20px" layout-align="center center">
-    <div ng-controller="FooterController as vm" class="footer-wrapper" layout="row" layout-align="start start" flex="70">
+    <div ng-controller="FooterController as vm" class="footer-wrapper container-align" layout="row" layout-align="start start">
         <div class="left-footer" layout="column" flex="30">
             <div class="about-us" layout="column" layout-padding="10px">
                 <span class="title-about-us">ABOUT US</span>
@@ -8,7 +8,7 @@
                 <span>{{vm.footer.about.email}}</span>
             </div>
             <div class="footer-image" layout-fill>
-                <img width="250px" height="130px" ng-src="{{vm.footer.about.image-url}}" alt="city">
+                <img width="250px" height="130px"  src="/app/assets/footer-city.jpg" alt="city">
             </div>
         </div>
         <div class="right-footer" layout="column" layout-align="start center">

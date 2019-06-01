@@ -1,6 +1,6 @@
 <md-toolbar class="md-tall" layout="column" ng-controller="HeaderController as vm">
     <div class="info-first" layout="row" layout-align="center center">
-        <div layout="row" flex="70" layout-align="space-between center">
+        <dv layout="row" class="container-align" layout-align="space-between center">
             <div class="left-nav">
                 <ul class="toolbar-data">
                     <li>
@@ -24,20 +24,20 @@
                     <li ng-repeat="item in vm.header.rightNav">{{ item.name | capitalize}}</li>
                 </ul>
             </div>
-        </div>
+    </div>
 
     </div>
     <div class="info-second" layout="row" layout-align="center center">
-        <div layout="row" flex="70" layout-align="space-between center">
+        <div layout="row" class="container-align" layout-align="space-between center">
             <div class="app-logo" layout="row" layout-align="center center">
                 <img src="assets/logo.gif" alt="logo">
                 <h2>VENENO</h2>
             </div>
             <div class="search-box" layout-padding="1px" layout="row" layout-align="space-between center">
                 <div class="category">
-                    <select ng-model="vm.categoryChanged" ng-change="vm.onCategoryChange(vm.categoryChanged)">
-                        <option value="">All categories</option>
-                        <option ng-repeat="category in vm.products | unique:'category'" value="{{category}}">
+                    <select ng-model="vm.selectedCategory" ng-change="vm.onCategoryChange(vm.selectedCategory)">
+                        <option ng-value="">All products</option>
+                        <option ng-repeat="category in vm.products | unique:'category'" ng-value="category">
                             {{category | uppercase}}
                         </option>
                     </select>
@@ -55,21 +55,25 @@
 
             <div class="cart-items" layout="row" layout-align="center center">
                 <img src="assets/cart.png" alt="">
-                <spam>MY CART: 00 ITEM </spam>
+                <span>MY CART: 00 ITEM </span>
             </div>
         </div>
 
     </div>
 </md-toolbar>
 
-<md-nav-bar class="nav-bar" layout-sm="column" layout="row" layout-align="center center" aria-label="navigation"
-    md-selected-nav-item="currentNavItem">
-    <!-- <md-nav-item class="nav-item" ng-repeat="item in vm.header.menuItems" 
-    md-nav-href="#" name="item.name"> {{item.name | capitalize}} </md-nav-item> -->
-    <md-nav-item class="nav-item" md-nav-href="#/products" name="products">Home</md-nav-item>
-    <md-nav-item class="nav-item" md-nav-href="#" name="details">Men's</md-nav-item>
-    <md-nav-item class="nav-item" md-nav-href="#" name="page3"> Women's </md-nav-item>
-    <md-nav-item class="nav-item" md-nav-href="#" name="page4"> Sports </md-nav-item>
-    <md-nav-item class="nav-item" md-nav-href="#" name="page5"> About Us </md-nav-item>
-    <md-nav-item class="nav-item" md-nav-href="#" name="page6"> Custom </md-nav-item>
-</md-nav-bar>
+<div class="nav-bar-wrapper">
+    <div layout="row" class="container-align" layout-align="space-between center">
+        <md-nav-bar class="nav-bar container-align" layout-sm="column" layout="row" layout-align="start center"
+            aria-label="navigation" md-selected-nav-item="currentNavItem">
+            <md-nav-item class="nav-item" md-nav-href="#/products" name="products">Home</md-nav-item>
+            <md-nav-item class="nav-item" md-nav-href="#" name="details">Men's</md-nav-item>
+            <md-nav-item class="nav-item" md-nav-href="#" name="page3"> Women's </md-nav-item>
+            <md-nav-item class="nav-item" md-nav-href="#" name="page4"> Sports </md-nav-item>
+            <md-nav-item class="nav-item" md-nav-href="#" name="page5"> About Us </md-nav-item>
+            <md-nav-item class="nav-item" md-nav-href="#" name="page6"> Custom </md-nav-item>
+        </md-nav-bar>
+        <span class="call-number">Call us 24/7: +38269567213 </span>
+    </div>
+
+</div>

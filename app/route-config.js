@@ -20,14 +20,12 @@ function config($routeProvider, $locationProvider) {
             templateUrl: './components/product-details/product-details.html',
             controller: 'ProductDetailsController',
             controllerAs: 'vm',
-            css:'scss/product-details.scss'
         });
     $routeProvider
         .otherwise({
             templateUrl: "./components/product-list/product-list.html",
             controller: 'ProductListController',
             controllerAs: 'vm',
-            css:'scss/product-list.scss'
         });
 
     

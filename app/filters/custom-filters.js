@@ -17,22 +17,20 @@ angular.module("customFilters", [])
             }
         }
     })
-    .filter("range", function ($filter) {
-        return function (data, page, size) {
-            if (angular.isArray(data) && angular.isNumber(page) && angular.isNumber(size)) {
-                var start_index = (page - 1) * size;
-                if (data.length < start_index) {
-                    return [];
-                } else {
-                    return $filter("limitTo")(data.splice(start_index), size);
-                    //ako smo na zadnjoj strani, gdje imamo 2 elementa, a size je 3,
-                    // bez problema ce uzeti onoliko elemenata koliko imamo
-                }
-            } else {
-                return data;
-            }
-        }
-    })
+    // .filter("range", function ($filter) {
+    //     return function (data, page, size) {
+    //         if (angular.isArray(data) && angular.isNumber(page) && angular.isNumber(size)) {
+    //             var start_index = (page - 1) * size;
+    //             if (data.length < start_index) {
+    //                 return [];
+    //             } else {
+    //                 return $filter("limitTo")(data.splice(start_index), size);
+    //             }
+    //         } else {
+    //             return data;
+    //         }
+    //     }
+    // })
     .filter("pageCount", function () {
         return function (data, size) {
             if (angular.isArray(data)) {

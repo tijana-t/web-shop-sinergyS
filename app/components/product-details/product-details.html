@@ -1,5 +1,306 @@
-<div>
+<div class="details-container container-align">
     <div breadcrumb="vm.breadcrumb">
-        
+
     </div>
+    <div class="center-container margin-bottom" layout-align="center start" layout="row">
+        <div class="details-left-container" layout-padding="10px" flex="75" layout="column">
+            <div class="detailed-view margin-bottom" layout="row">
+                <div class="details slick-carousel" flex="50" layout="column" layout-align="center center">
+                    <div class="slider-for" slick="{
+                                slidesToShow: 1,
+                                slidesToScroll: 1,
+                                arrows: false,
+                                fade: true,
+                                asNavFor: '.slider-nav'
+                            }" slides-to-scroll="1" slides-to-show="1" fade="true" arrows="false"
+                        as-nav-for=".slider-nav">
+
+                        <div class="slick-slide"> <img src="/app/assets/products/product10.jpg" alt="">
+                        </div>
+                        <div class="slick-slide"> <img src="/app/assets/products/product15.jpg" alt="">
+                        </div>
+                        <div class="slick-slide"> <img src="/app/assets/products/product8.jpg" alt="">
+                        </div>
+                        <div class="slick-slide"> <img src="/app/assets/products/product11.jpg" alt="">
+                        </div>
+
+                    </div>
+
+                    <div class="slider-nav" slick="{
+                                slidesToShow: 3,
+                                slidesToScroll: 1,
+                                asNavFor: '.slider-for',
+                                dots: true,
+                                centerMode: true,
+                                focusOnSelect: true
+                        }" as-nav-for=".slider-for" auto-play="true" default="true" slides-to-show="3"
+                        focus-on-select="true" slides-to-scroll="1">
+
+
+                        <div class="slick-slide"> <img src="/app/assets/products/product10.jpg" alt="">
+                        </div>
+                        <div class="slick-slide"> <img src="/app/assets/products/product15.jpg" alt="">
+                        </div>
+                        <div class="slick-slide"> <img src="/app/assets/products/product8.jpg" alt="">
+                        </div>
+                        <div class="slick-slide"> <img src="/app/assets/products/product11.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="detailed-info" layout-padding style="width: 100%" flex="50" layout="column">
+                    <div layout="column">
+                        <span class="product-name">
+                            {{vm.product.name | uppercase}}
+                        </span>
+                        <span class="product-price">
+                            {{vm.product.price | currency}}
+                        </span>
+                    </div>
+
+                    <div layout="column" layout-padding="0 0 2px 0">
+                        <span>Brand: {{vm.product.manufacturer}}</span>
+                        <span>Product Code: {{vm.product.code}}</span>
+                        <span>Availability:
+                            <span style="color: rgb(87, 223, 223)">{{vm.product.availability}}</span></span>
+                    </div>
+
+                    <div layout="column">
+                        <span class="required-star">Manufacturer</span>
+                        <div class="custom-select">
+                            <select>
+                                <option hidden value=''>--Select options--</option>
+                                <option ng-repeat="item in vm.sideMenu.manufacturer" value="{{item.name}}">
+                                    {{item.name | capitalize}}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div layout="column">
+                        <span class="required-star">Color</span>
+                        <div class="custom-select">
+                            <select>
+                                <option hidden value=''>--Select options--</option>
+                                <option ng-repeat="item in vm.sideMenu.color" value="{{item.name}}">
+                                    {{item.name | capitalize}}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div layout="row" layout-align="space-between center">
+                        <div class="quantity-wrapper" layout="row" layout-align="center center">
+                            <span style="margin-right: 2px">Quantity:</span>
+
+                            <div class="quantity" layout="row" layout-align="center center">
+                                <span contenteditable="true" ng-bind="vm.spanValue"></span>
+                                <img src="assets/d68dc39a9e.svg" width="15px" height="15px" ng-click="vm.addQuantity()"
+                                    alt="">
+                            </div>
+                        </div>
+                        <div layout="row" layout-align="center center">
+                            <span>Share: </span>
+                            <div class="social-media">
+                                <img src="assets/icons/facebook.png" alt="">
+                                <img src="assets/icons/google.png" alt="">
+                                <img src="assets/icons/twitter.png" alt="">
+                                <img src="" alt="">
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="cart-button" layout="row" layout-align="start center">
+                        <md-button class="custom-button" layout="row" layout-align="center center">
+                            <i class="material-icons">
+                                shopping_cart
+                            </i>
+                            <span>Add to cart </span>
+                        </md-button>
+                        <img src="assets/circle.svg" alt="">
+                        <img src="assets/heart-full.svg" alt="">
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="tabs margin-bottom">
+                <div class="tab-header">
+                    <div ng-class="vm.getTabClass('description')" ng-click="vm.sendValue('description')"
+                        class="header-button">
+                        DESCRIPTION
+                    </div>
+                    <div ng-class="vm.getTabClass('reviews')" ng-click="vm.sendValue('reviews')" class="header-button">
+                        REVIEWS
+                    </div>
+                    <div ng-class="vm.getTabClass('tags')" ng-click="vm.sendValue('tags')" class="header-button">
+                        PRODUCT TAGS
+                    </div>
+                </div>
+
+
+                <div class="text-wrapper">
+                    <div ng-show="vm.value =='description'" class="inside-text">
+
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Assumenda facere possimus nulla architecto nisi quae?
+                        Temporibhitecto nisi quae?
+                        Temporibus quae aliquam fugit delectus labore aut. F
+                        uga placeat nesciunt voluptatum sunt, quibusdam iusto hic!
+                    </div>
+                    <div ng-show="vm.value =='reviews'" class="inside-text">
+
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Assumenda facere possimus nulla architecto nisi quae?
+                        Temporibus quae aliquam fugit delectus labore aut. F
+                        uga placeat nesciunt voluptatum sunt, quibusdam iusto hic!
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Assumenda facere possimus nulla architecto nisi quae?
+                        Temporibus quae aliquam fugit delectus labore aut. F
+                        uga placeat nesciunt voluptatum sunt, quibusdam iusto hic!
+                    </div>
+                    <div ng-show="vm.value == 'tags'" class="inside-text">
+
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Assumenda facere possimus nulla architecto nisi quae?
+                        Temporibus quae aliquam fugit delectus labore aut. F
+                        uga placeat nesciunt voluptatum sunt, quibusdam iusto hic!
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Assumenda facere possimus nulla architecto nisi quae?
+                        Temporibus quae aliquam fugit delectus labore aut. F
+                        uga placeat nesciunt voluptatum sunt, quibusdam iusto hic!
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="up-sell margin-bottom" layout="column" layout-align="center start">
+                <div layout="row" layout-align="start center">
+                    <span class="box"></span>
+                    <span>UP SELL PRODUCTS</span>
+                </div>
+                <div layout="row" style="width:100%" class="details-products-box" layout-align="space-between center">
+                    <div ng-repeat="product in vm.products | limitTo: vm.quantity ">
+                        <a id="product-link" href="#/products/{{product.id}}">
+                            <div class="photo-container" layout="column" layout-align="center center">
+                                <span class="data-badge">{{product.status}}</span>
+                                <img ng-src="{{product.url}}" class="product-image" height="50px" width="100px"
+                                    alt="{{product.name}}">
+                                <span class="item-name">{{product.name}}</span>
+                                <!-- <span>{{item.description}}</span> -->
+                                <strong class="item-price">{{product.price | currency}}</strong>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="details-right-container" flex="25" layout="column" layout-padding="10px">
+
+            <div class="colored-title relate-products" ng-style="{'width':'100%', 'margin-top':'0'}" layout="row"
+                layout-align="start center">
+                <div class="icon">
+                    <i class="material-icons"> bookmark </i>
+                </div>
+                <span ng-click="filterTags()">
+                    RELATE PRODUCTS
+                </span>
+
+            </div>
+            <div class="small-photos" layout="row" ng-repeat="photo in vm.sideMenu.relate">
+                <div class="small-image" flex="40">
+                    <img width="100%" height="100px" ng-src="{{photo.url}}" alt="photo.name">
+                </div>
+                <div flex="60" class="photo-description" layout="column" layout-align="center start">
+                    <span class="product-name">
+                        {{photo.name}}
+                    </span>
+                    <br>
+                    <span class="product-price item-price">
+                        {{photo.price | currency}}
+                    </span>
+                    <div class="stars">
+                        <i class="material-icons">
+                            star
+                        </i>
+                        <i class="material-icons">
+                            star
+                        </i><i class="material-icons">
+                            star_half
+                        </i>
+                        <i class="material-icons">
+                            star_border
+                        </i>
+                        <i class="material-icons">
+                            star_border
+                        </i>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="colored-title popular-tags" ng-style="{'width':'100%'}" layout="row"
+                layout-align="start center">
+                <div class="icon">
+                    <i class="material-icons"> bookmark </i>
+                </div>
+                <span ng-click="filterTags()">
+                    POPULAR TAGS
+                </span>
+            </div>
+            <div class="tags" layout="row" layout-wrap>
+                <span class="tag-wrapper" ng-class="vm.getTagClass(item.name)" ng-click="vm.filterTags(item.name)"
+                    ng-repeat="item in vm.sideMenu.tags">{{item.name | capitalize}}</span>
+            </div>
+
+            <div class="colored-title compare-products" ng-style="{'width':'100%'}" layout="row"
+                layout-align="start center">
+                <div class="icon">
+                    <i class="material-icons"> bookmark </i>
+                </div>
+                <span>
+                    COMPARE PRODUCTS
+                </span>
+            </div>
+            <div class="compare-products-box">
+                You have no items to compare
+            </div>
+            <img src="/app/assets/horizontalna.jpg" width="100%" height="auto" alt="">
+
+        </div>
+
+    </div>
+    <div class="simple slick-carousel" layout="row" layout-align="center center">
+        <slick default="true" slides-to-show="5" slides-to-scroll="1">
+            <div class="slick-slide"> <img src="/app/assets/footer-city.jpg" alt="">
+            </div>
+            <div class="slick-slide"> <img src="/app/assets/footer-city.jpg" alt="">
+            </div>
+            <div class="slick-slide"> <img src="/app/assets/footer-city.jpg" alt="">
+            </div>
+            <div class="slick-slide"> <img src="/app/assets/footer-city.jpg" alt="">
+            </div>
+            <div class="slick-slide"> <img src="/app/assets/footer-city.jpg" alt="">
+            </div>
+            <div class="slick-slide"> <img src="/app/assets/footer-city.jpg" alt="">
+            </div>
+            <div class="slick-slide"> <img src="/app/assets/footer-city.jpg" alt="">
+            </div>
+            <div class="slick-slide"> <img src="/app/assets/footer-city.jpg" alt="">
+            </div>
+            <div class="slick-slide"> <img src="/app/assets/footer-city.jpg" alt="">
+            </div>
+            <div class="slick-slide"> <img src="/app/assets/footer-city.jpg" alt="">
+            </div>
+
+
+        </slick>
+
+    </div>
+
 </div>

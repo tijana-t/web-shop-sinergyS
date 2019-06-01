@@ -1,21 +1,23 @@
-/* footer style */
-/* .footer-image{
-    height: auto;
-    width: 30px;
-} */
-
-footer{
+footer {
     background-color: #eee;
+    position: absolute;
+    // bottom: 0;
+    top: auto;
+    width: 100%;
 }
-.social-media-icons{
+
+.social-media-icons {
     width: 35px;
     height: 35px;
     margin: 1px !important;
 }
-.connect-with-us{
+
+.connect-with-us {
     border-bottom: white;
 }
-.black-footer{
+
+.black-footer {
     background-color: black;
 }
+
 /* footer style */

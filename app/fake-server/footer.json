@@ -4,7 +4,7 @@
             "description": "This is Tijana's first angularJs website.",
             "phone": "+38269567213",
             "email": "ttomic152@gmail.com",
-            "image-url": "../assets/footer-city.jpg"
+            "image-url": "/app/assets/footer-city.jpg"
         },
 
         "information": [{

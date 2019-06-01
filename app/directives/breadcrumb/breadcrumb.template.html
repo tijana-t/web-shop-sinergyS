@@ -1,5 +1,5 @@
 <ul class="breadcrumb">
     <li ng-repeat="item in data track by $index">
-        <a href="/app/app.html#{{item.url}}">{{item.name}}</a>
+        <a class="breadcrump-link" href="/app/app.html#{{item.url}}">{{item.name | uppercase}}</a>
     </li>
 </ul>

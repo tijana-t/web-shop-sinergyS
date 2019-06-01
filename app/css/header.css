@@ -1,15 +1,3 @@
-md-nav-bar.nav-bar {
-  background-color: black;
-  color: white !important; }
-
-.md-nav-bar {
-  width: 70%;
-  /* justify-content: start;
-    align-items: center; */ }
-
-md-toolbar.md-tall {
-  background-color: #f4f4f4; }
-
 md-nav-bar .md-button._md-nav-button.md-unselected {
   color: #ffffff; }
 
@@ -20,19 +8,31 @@ md-nav-bar ._md-nav-button.md-ink-ripple.md-active {
 md-nav-bar md-nav-ink-bar {
   background: #f01b48; }
 
+div.nav-bar-wrapper {
+  background-color: black; }
+  div.nav-bar-wrapper md-nav-bar.nav-bar {
+    color: white !important; }
+    div.nav-bar-wrapper md-nav-bar.nav-bar .nav-item {
+      margin: 0;
+      padding: 0; }
+      div.nav-bar-wrapper md-nav-bar.nav-bar .nav-item a {
+        margin: 0; }
+
+md-toolbar.md-tall {
+  background-color: #f4f4f4; }
+
 .nav-item.md-nav-item :hover {
   background: #f01b48; }
 
-/* header-style */
 .toolbar-data {
   list-style-type: none;
   text-decoration-style: none;
   color: black;
   padding: 0; }
-
-.toolbar-data li {
-  display: inline-block;
-  font-size: 13px; }
+  .toolbar-data li {
+    margin-right: 7px;
+    display: inline-block;
+    font-size: 13px; }
 
 select {
   /* -webkit-appearance: none; */
@@ -43,13 +43,9 @@ select {
 .info-first {
   background-color: #dddddd; }
 
-.info-second {
-  /* width: 100%; */ }
-
-/* header-style */
-/* app-logo */
 .app-logo h2 {
   color: black;
+  font-size: 35px;
   font-weight: bold; }
 
 .search-box {
@@ -74,5 +70,10 @@ select {
   border-right: 1px solid gray; }
 
 .cart-items span {
+  margin-left: 5px;
   color: black !important;
   font-size: 15px !important; }
+
+.call-number {
+  color: white;
+  width: 217px; }

@@ -69,5 +69,24 @@
         "name": "black"
     },{
         "name": "fashion"
-    }]
+    }],
+
+    "relate":[
+        {
+            "name": "T-shoes lorem ipsum",
+            "price": 210,
+            "url": "assets/products/product1.jpg",
+            "stars": "adidas"
+        },{
+            "name": "T-shoes lorem ipsum",
+            "price": 300,
+            "url": "assets/products/product1.jpg",
+            "stars": "adidas"
+        },{
+            "name": "T-shoes lorem ipsum",
+            "price": 210,
+            "url": "assets/products/product1.jpg",
+            "stars": "adidas"
+        }
+    ]
 }

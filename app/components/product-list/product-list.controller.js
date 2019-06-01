@@ -2,9 +2,9 @@ angular
     .module('app')
     .controller('ProductListController', ProductListController);
 
-ProductListController.$inject = ['dataService', '$rootScope', '$scope', '$timeout'];
+ProductListController.$inject = ['dataService', '$rootScope', '$scope', '$timeout', '$filter'];
 
-function ProductListController(dataService, $rootScope, $scope, $timeout) {
+function ProductListController(dataService, $rootScope, $scope, $timeout, $filter) {
     var vm = this;
     vm.products = [];
     vm.product = {};
@@ -18,11 +18,16 @@ function ProductListController(dataService, $rootScope, $scope, $timeout) {
     vm.tagActiveClass = "tag-active-class";
     vm.tagInactiveClass = "tag-inactive-class";
 
+    vm.pagingActiveClass = "page-active-class";
+    vm.pagingInactiveClass = "page-inactive-class";
+
     vm.selectedCategory = null;
 
     vm.manufacturerChanged = '';
     vm.colorChanged = '';
     vm.tagChanged = null;
+    vm.sortBy = 'name';
+    vm.gridView = true;
 
 
     vm.slider = {
@@ -34,6 +39,9 @@ function ProductListController(dataService, $rootScope, $scope, $timeout) {
         // },
     }
 
+    vm.selectedPage = 1;
+    vm.currentSize = 5;
+
     vm.selectCategory = selectCategory;
     vm.categoryFilterFn = categoryFilterFn;
     vm.getCategoryClass = getCategoryClass;
@@ -42,11 +50,13 @@ function ProductListController(dataService, $rootScope, $scope, $timeout) {
     vm.getFilterClass = getFilterClass;
     vm.filterTags = filterTags;
 
-    vm.selectedPage = 1;
-    vm.pageSize = 10;
     vm.selectPage = selectPage;
     vm.getPageClass = getPageClass;
     vm.getTagClass = getTagClass;
+
+    vm.changeSize = changeSize;
+    vm.numberOfProds = numberOfProds;
+    vm.numberOfColors = numberOfColors;
 
     vm.breadcrumb = [{
         name: 'home',
@@ -61,10 +71,21 @@ function ProductListController(dataService, $rootScope, $scope, $timeout) {
         vm.searchTerm = object;
     });
     $scope.$on('categoryChanged', function (data, object) {
-        vm.categoryChanged = object;
+        vm.selectedCategory = object;
+
+        if (!object) {
+            vm.selectedCategory = null;
+            vm.manufacturerChanged = '';
+            vm.colorChanged = '';
+            vm.tagChanged = null;
+            vm.slider = {
+                min: 25,
+                max: 400,
+            }
+            
+        }
+
     });
-
-
 
 
     activate();
@@ -83,7 +104,7 @@ function ProductListController(dataService, $rootScope, $scope, $timeout) {
                 return vm.products;
             });
     }
-    
+
     function getSideMenuData() {
         return dataService.getSideMenuData()
             .then(function (data) {
@@ -106,7 +127,7 @@ function ProductListController(dataService, $rootScope, $scope, $timeout) {
     }
 
     function getPageClass(page) {
-        return vm.selectedPage == page ? vm.productListActiveClass : vm.productListInactiveClass;
+        return vm.selectedPage == page ? vm.pagingActiveClass : vm.pagingInactiveClass;
     };
 
     function selectCategory(newCategory) {
@@ -149,13 +170,31 @@ function ProductListController(dataService, $rootScope, $scope, $timeout) {
                 return vm.manufacturerChanged == item ? vm.productListActiveClass : vm.productListInactiveClass;
                 break;
 
-            default: 
+            default:
                 break;
         }
 
     }
+
     function getTagClass(item) {
         return (vm.tagChanged == item) ? vm.tagActiveClass : vm.tagInactiveClass;
+    }
+
+    function changeSize(size) {
+        vm.selectedPage = 1;
+    }
+
+    function numberOfProds(item) {
+        var arr = $filter('filter')(vm.products, {
+            "manufacturer": item.name
+        });
+        return arr.length || 0;
+    }
+    function numberOfColors(item) {
+        var arr = $filter('filter')(vm.products, {
+            "color": item.name
+        });
+        return arr.length || 0;
     }
 
 

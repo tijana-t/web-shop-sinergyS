@@ -9,19 +9,12 @@ angular
         vm.header = {};
         vm.products;
         vm.search = '';
-        vm.categoryChanged;
 
         vm.onSearch = onSearch;
         vm.onCategoryChange = onCategoryChange;
 
 
         activate();
-
-        // $scope.$on('products', function(event, products) {
-        //     vm.products = products;
-        //     console.log('vm prod from on:', vm.products);
-        //   });
-
 
         function activate() {
             return getHeaderData().then(function () {
@@ -40,7 +33,6 @@ angular
         function getHeaderData() {
             return dataService.getHeaderData()
                 .then(function (data) {
-                    console.log(data);
                     vm.header = data;
                     return vm.header;
                 });
@@ -50,7 +42,7 @@ angular
         }
 
         function onCategoryChange(category) {
-            vm.categoryChanged = category;
+            vm.selectedCategory = category;
             $rootScope.$broadcast('categoryChanged', category);
         }
 

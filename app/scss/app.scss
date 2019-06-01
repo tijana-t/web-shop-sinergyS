@@ -1,8 +1,38 @@
 body,
-html {
+html,
+md-content,
+.breadcrump-link,
+.breadcrumb {
     background-color: white;
+}
 
-    // section {
-    //     min-height: 200px; 
-    // }
+
+.container-align {
+    width: 1000px;
+    margin: auto;
+    padding: 0;
+
+    .layout-padding {
+        padding: 0 10px 10px 0;
+    }
+}
+
+.breadcrump-link {
+
+    :hover {
+        text-decoration: none;
+        outline: 0;
+    }
+
+    text-decoration: none;
+    color: black;
+    outline: none;
+}
+
+.breadcrumb {
+    margin: 15px 0;
+}
+
+.margin-bottom {
+    margin-bottom: 20px;
 }

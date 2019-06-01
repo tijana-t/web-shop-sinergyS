@@ -1,64 +1,77 @@
-md-nav-bar.nav-bar {
+md-nav-bar {
+    .md-button._md-nav-button.md-unselected {
+        color: #ffffff;
+    }
+
+    ._md-nav-button.md-ink-ripple.md-active {
+        color: #ffffff;
+        background: #f01b48;
+    }
+
+    md-nav-ink-bar {
+        background: #f01b48;
+    }
+
+
+}
+
+
+div.nav-bar-wrapper {
     background-color: black;
-    color: white !important;
+
+    md-nav-bar.nav-bar {
+        color: white !important;
+
+        .nav-item {
+            margin: 0;
+            padding: 0;
+
+            a {
+                margin: 0;
+
+            }
+        }
+    }
+
+
 }
-.md-nav-bar{
-    width: 70%;
-    /* justify-content: start;
-    align-items: center; */
-}
+
 
 md-toolbar.md-tall {
     background-color: #f4f4f4;
 }
 
-md-nav-bar .md-button._md-nav-button.md-unselected {
-    color: #ffffff;
-}
-md-nav-bar ._md-nav-button.md-ink-ripple.md-active{
-    color: #ffffff;
-    background: #f01b48;
-}
-md-nav-bar md-nav-ink-bar {
-    background: #f01b48;
-  }
-
-.nav-item.md-nav-item :hover{
+.nav-item.md-nav-item :hover {
     background: #f01b48;
 }
 
-/* header-style */
-.toolbar-data{
+.toolbar-data {
     list-style-type: none;
     text-decoration-style: none;
     color: black;
     padding: 0;
+
+    li {
+        margin-right: 7px;
+        display: inline-block;
+        font-size: 13px;
+    }
 }
-.toolbar-data li{
-    display: inline-block;
-    font-size: 13px;
-    
-}
+
 select {
     /* -webkit-appearance: none; */
     background-color: #dddddd;
     border: none;
     outline: none;
 }
+
 .info-first {
     background-color: #dddddd;
 }
 
-.info-second{
-    /* width: 100%; */
-}
-
-/* header-style */
-
-/* app-logo */
-
-.app-logo h2{
+.app-logo h2 {
     color: black;
+    font-size: 35px;
     font-weight: bold;
 }
 
@@ -68,7 +81,8 @@ select {
     background-color: white;
     padding: 0;
 }
-.search-product input{
+
+.search-product input {
     font-size: 15px;
     outline: none;
     border: none;
@@ -76,11 +90,13 @@ select {
     background-color: transparent;
     box-shadow: none;
 }
+
 .icon {
     color: black;
     border: none !important;
 }
-.category select{
+
+.category select {
     font-size: 15px;
     background-color: white;
     border-right: 1px solid gray;
@@ -90,8 +106,17 @@ select {
 //search box
 
 //cart
-.cart-items span{
-    color: black !important;
-    font-size: 15px !important;
+.cart-items {
+    span {
+        margin-left: 5px;
+        color: black !important;
+        font-size: 15px !important;
+    }
 }
+
+.call-number{
+    color: white;
+    width: 217px;
+}
+
 //cart

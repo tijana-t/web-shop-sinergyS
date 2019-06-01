@@ -8,7 +8,9 @@
         "status": "new",
         "manufacturer": "adidas",
         "color": "black",
-        "tags": ["shoes", "women", "clothing"]
+        "tags": ["shoes", "women", "clothing"],
+        "code": "128 pxc",
+        "availability": "instock"
     },
     {
         "id": "2",
@@ -18,9 +20,12 @@
         "price": 110,
         "url": "assets/products/product2.jpg",
         "status": "sold",
+        "statusColor":"#ff9600",
         "manufacturer": "adidas",
         "color": "black",
-        "tags": ["shoes", "women", "clothing"]
+        "tags": ["shoes", "women", "clothing"],
+        "code": "12 pxc",
+        "availability": "instock"
     },
     {
         "id": "3",
@@ -30,9 +35,12 @@
         "price": 210,
         "url": "assets/products/product1.jpg",
         "status": "new",
+        "statusColor": "#1edcb9",
         "manufacturer": "adidas",
         "color": "black",
-        "tags": ["shoes", "women", "clothing"]
+        "tags": ["shoes", "women", "clothing"],
+        "code": "12 pxc",
+        "availability": "instock"
     },
     {
         "id": "4",
@@ -42,9 +50,12 @@
         "price": 202,
         "url": "assets/products/product2.jpg",
         "status": "sale",
+        "statusColor":"#ff9600",
         "manufacturer": "adidas",
         "color": "white",
-        "tags": ["shoes", "women", "clothing"]
+        "tags": ["shoes", "women", "clothing"],
+        "code": "12 pxc",
+        "availability": "instock"
     },
     {
         "id": "5",
@@ -53,10 +64,13 @@
         "category": "Category #5",
         "price": 211,
         "url": "assets/products/produc5.jpg",
-        "status": "new",
+        "status": "sale",
+        "statusColor":"#ff9600",
         "manufacturer": "adidas",
         "color": "white",
-        "tags": ["shoes", "women", "clothing"]
+        "tags": ["shoes", "women", "clothing"],
+        "code": "12 pxc",
+        "availability": "instock"
     },
     {
         "id": "6",
@@ -66,9 +80,14 @@
         "price": 211,
         "url": "assets/products/product6.jpg",
         "status": "new",
+        "statusColor": "#1edcb9",
         "manufacturer": "adidas",
         "color": "white",
-        "tags":["shoes","women","clothing"]    },
+        "tags": ["shoes", "women", "clothing"],
+        "code": "12 pxc",
+        "availability": "instock"
+
+    },
     {
         "id": "7",
         "name": "Product #7",
@@ -77,9 +96,12 @@
         "price": 211,
         "url": "assets/products/product1.jpg",
         "status": "new",
+        "statusColor": "#1edcb9",
         "manufacturer": "adidas",
         "color": "white",
-        "tags": ["shoes", "women", "clothing"]
+        "tags": ["shoes", "women", "clothing"],
+        "code": "12 pxc",
+        "availability": "instock"
     },
     {
         "id": "8",
@@ -89,9 +111,12 @@
         "price": 211,
         "url": "assets/products/product8.jpg",
         "status": "sale",
+        "statusColor":"#ff9600",
         "manufacturer": "winex",
         "color": "white",
-        "tags": ["shoes", "women", "clothing"]
+        "tags": ["shoes", "women", "clothing"],
+        "code": "12 pxc",
+        "availability": "instock"
 
     },
     {
@@ -102,9 +127,12 @@
         "price": 211,
         "url": "assets/products/product1.jpg",
         "status": "new",
+        "statusColor": "#1edcb9",
         "manufacturer": "NIKE",
         "color": "white",
-        "tags": ["shoes", "women", "clothing"]
+        "tags": ["shoes", "women", "clothing"],
+        "code": "12 pxc",
+        "availability": "instock"
 
     },
     {
@@ -115,9 +143,12 @@
         "price": 211,
         "url": "assets/products/product1.jpg",
         "status": "new",
+        "statusColor": "#1edcb9",
         "manufacturer": "NIKE",
         "color": "white",
-        "tags": ["shoes", "women", "clothing"]
+        "tags": ["shoes", "women", "clothing"],
+        "code": "12 pxc",
+        "availability": "instock"
 
     },
     {
@@ -128,9 +159,12 @@
         "price": 211,
         "url": "assets/products/product10.jpg",
         "status": "sale",
+        "statusColor":"#ff9600",
         "manufacturer": "nike",
         "color": "white",
-        "tags": ["shoes", "women", "clothing"]
+        "tags": ["shoes", "women", "clothing"],
+        "code": "12 pxc",
+        "availability": "instock"
 
     },
     {
@@ -141,9 +175,12 @@
         "price": 211,
         "url": "assets/products/product11.jpg",
         "status": "new",
+        "statusColor": "#1edcb9",
         "manufacturer": "converse",
         "color": "yellow",
-        "tags": ["shoes", "women", "clothing"]
+        "tags": ["shoes", "women", "clothing"],
+        "code": "12 pxc",
+        "availability": "instock"
 
     },
     {
@@ -154,9 +191,12 @@
         "price": 211,
         "url": "assets/products/product1.jpg",
         "status": "new",
+        "statusColor": "#1edcb9",
         "manufacturer": "adidas",
         "color": "blue",
-        "tags": ["shoes", "women", "clothing"]
+        "tags": ["shoes", "women", "clothing"],
+        "code": "12 pxc",
+        "availability": "instock"
 
 
     },
@@ -168,9 +208,11 @@
         "price": 211,
         "url": "assets/products/product13.jpg",
         "status": "new",
+        "statusColor": "#1edcb9",
         "manufacturer": "converse",
         "color": "white",
-        "tags": ["shoes", "women", "clothing"]
-
+        "tags": ["shoes", "women", "clothing"],
+        "code": "12 pxc",
+        "availability": "instock"
     }
 ]

@@ -3,21 +3,24 @@
     margin-top: 40px;
     color: white;
 }
-.box{
+
+.box {
     background-color: #f01b48;
     padding: 6px;
     margin-right: 5px;
 }
-.custom-list{
+
+.custom-list {
     list-style-type: none;
     color: gray;
-    display: contents; 
+    display: contents;
     /* ako stavimo inline, pravi space izmedju naslova i liste */
 }
 
 // range-slider
-span.rz-pointer.rz-pointer-min, span.rz-pointer.rz-pointer-max {
-    top: 4px; 
+span.rz-pointer.rz-pointer-min,
+span.rz-pointer.rz-pointer-max {
+    top: 4px;
     z-index: 3;
     width: 14px;
     height: 14px;
@@ -27,50 +30,91 @@ span.rz-pointer.rz-pointer-min, span.rz-pointer.rz-pointer-max {
     transition: all linear 0.3s;
 }
 
-span.rz-pointer.rz-pointer-min::after, span.rz-pointer.rz-pointer-max::after {
+span.rz-pointer.rz-pointer-min::after,
+span.rz-pointer.rz-pointer-max::after {
     // content: none;
     display: none;
 }
 
 // range-slider
 
-button.md-raised.md-primary.md-button.md-ink-ripple{
+button.md-raised.md-primary.md-button.md-ink-ripple {
     background-color: black !important;
     /* min-width: 65px; */
 }
-.icon{
+
+.icon {
     border-right: 1px solid rgba(206, 200, 200, 0.712);
     margin-right: 3px;
 }
-.tag-wrapper{
+
+.tag-wrapper {
     border: 1px solid gray;
     padding: 3px 6px 3px 6px;
     margin: 2px 2px 2px 2px;
 }
+
 .tag-active-class {
     background-color: black;
     color: white;
     outline: none;
 }
+
 .tag-inactive-class {
     background-color: white;
     color: black;
     outline: none;
 }
-.compare-products-box{
+
+.compare-products-box {
     border: 1px solid gray;
     margin-top: 10px;
 }
 
 // right main container
 
-.container {
-    margin-top: 20px;
-}
-
-.right-container, .left-container{
+.right-container,
+.left-container {
     box-sizing: border-box;
 }
+
+//sorting & pagination
+.sorting-details {
+    border-bottom: 1px solid rgba(206, 200, 200, 0.712)
+}
+
+.pagination-details-wrapper {
+    border-top: 1px solid rgba(206, 200, 200, 0.712)
+}
+
+.paging-box {
+    border-radius: 0;
+    border: 1px solid #868482;
+    padding: 0px 7px 0 7px;
+    color: #868482;
+    margin-right: 2px;
+}
+
+.paging-icon {
+    border: 1px solid #868482;
+    color: #868482;
+    font-size: 20px;
+    outline: 0;
+    margin: 0 2px;
+
+}
+
+.page-active-class {
+    background-color: rgba(128, 128, 128, 0.514);
+    color: white;
+
+}
+
+.pagination-details-wrapper {
+    margin-top: 5px;
+}
+
+//sorting
 
 .active-class {
     color: rgb(226, 51, 153);
@@ -100,9 +144,10 @@ button.md-raised.md-primary.md-button.md-ink-ripple{
 /* photo style */
 .header-photo {
     height: 200px;
-    background-size:cover; 
+    background-size: cover;
     background-image: url('/app/assets/cover.jpg');
 }
+
 /* photo style */
 
 /* product style */
@@ -110,32 +155,41 @@ button.md-raised.md-primary.md-button.md-ink-ripple{
     height: 150px;
     width: 150px;
 }
+
 /* product style */
 
 /* product badge */
-.photo-container{
+.photo-container {
     position: relative;
 }
-  .data-badge{
-      position: absolute;
-      top: -10px;
-      right: -10px;
-      font-size: 10px;
-      z-index: 10;
-      background-color: #1edcb9;
-      font-size: 15px;
-      padding: 3px 13px 3px 13px;
-  }
 
-  .item-price{
-      color: #15d1af;
+.data-badge {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 10px;
+    z-index: 10;
+    background-color: #1edcb9;
+    font-size: 15px;
+    padding: 3px 13px 3px 13px;
+}
 
-  }
-  .photo-container .item-name,.photo-container .item-price{
-      width: 100%;
-      border-bottom: 1px solid rgba(128, 128, 128, 0.514);
-      text-align: center;
-  } 
+.item-price {
+    color: #15d1af;
+
+}
+
+.photo-container .item-name,
+.photo-container .item-price {
+    width: 100%;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.514);
+    text-align: center;
+}
+
+span.item-name {
+    color: black;
+}
+
 /* product badge */
 
 
@@ -146,10 +200,27 @@ button.md-raised.md-primary.md-button.md-ink-ripple{
 } */
 
 // slick-carousel
-.slick-slide {
-    // background-image: url('../assets/cover.jpg');
-    width: 20%;
-    height: 150px;
+
+.simple.slick-carousel {
+
+    .slick-next,
+    .slick-prev {
+        &::before {
+            color: #f01b48;
+        }
+    }
+
+    .slick-slide {
+        img {
+            margin: auto;
+            width: 84% !important;
+            height: 80px !important;
+        }
+
+    }
 }
 
-// slick-carousel
+.list-view {
+    width: 100%;
+
+}

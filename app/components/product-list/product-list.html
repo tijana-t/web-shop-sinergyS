@@ -1,170 +1,253 @@
-<div layout="column" layout-align="start start">
-    <div breadcrumb="vm.breadcrumb"></div>
+<!-- <div layout="column" layout-align="start start"> -->
 
-    <div layout="column" class="container">
+<div layout="column" class="container container-align">
 
-        <div class="main-container" layout-padding="20px" layout-align="center start" layout="row">
-            <div class="left-container" layout="column" flex="20" layout-padding="10px">
-                <div class="first-item" layout="row" layout-align="center center" ng-click="vm.selectCategory()">
-                    <i class="material-icons">
-                        menu
-                    </i>
-                    <span>
-                        SHOP BY CATEGORIES
-                    </span>
-                </div>
-                <div class="category-items" ng-repeat="product in vm.products | orderBy:'category' | unique:'category'"
-                    ng-click="vm.selectCategory(product)" ng-class="vm.getCategoryClass(product)">
-                    {{product}}
-                </div>
-                <div class="colored-title shop-by" layout="row" layout-align="start center">
-                    <div class="icon">
-                        <i class="material-icons"> bookmark </i>
-                    </div>
-                    <span>
-                        SHOP BY
-                    </span>
-                </div>
-                <div class="manufacturer" layout="column" layout-align="center start">
-                    <div layout="row" layout-align="center center">
-                        <span class="box"></span>
-                        <span ng-click="vm.selectManufacturer()">MANUFACTURER</span>
-                    </div>
-                    <div>
-                        <ul class="custom-list">
-                            <li ng-class="vm.getFilterClass(item.name, 'manufacturer')"
-                                ng-click="vm.selectManufacturer(item.name)"
-                                ng-repeat="item in vm.sideMenu.manufacturer">
-                                {{item.name | capitalize}}
-                                <!-- ({{item.value}}) -->
-                                ({{vm.numberOfProds}})
-                            </li>
-                        </ul>
-                    </div>
+    <div style="background-color: white" breadcrumb="vm.breadcrumb"></div>
 
+    <div class="main-container" layout-align="center start" layout="row">
+        <div class="left-container" layout-padding="5px" layout="column" flex="25">
+            <div class="first-item" layout="row" layout-align="center center" ng-click="vm.selectCategory()">
+                <i class="material-icons">
+                    menu
+                </i>
+                <span>
+                    SHOP BY CATEGORIES
+                </span>
+            </div>
+            <div class="category-items" ng-repeat="product in vm.products | orderBy:'category' | unique:'category'"
+                ng-click="vm.selectCategory(product)" ng-class="vm.getCategoryClass(product)">
+                {{product}}
+            </div>
+            <div class="colored-title shop-by" layout="row" layout-align="start center">
+                <div class="icon">
+                    <i class="material-icons"> bookmark </i>
                 </div>
-                <div class="price" layout="column" layout-align="center start">
-                    <div layout="row" layout-align="center center">
-                        <span class="box"></span>
-                        <span>PRICE</span>
-                    </div>
-                </div>
-                <!-- <md-slider ng-model="slider.value" min="25" max="500" aria-label="blue" id="blue-slider" class="md-primary">
-                        </md-slider> -->
-                <rzslider rz-slider-model="vm.slider.min" rz-slider-high="vm.slider.max"
-                    rz-slider-options="slider.options">
-                </rzslider>
+                <span>
+                    SHOP BY
+                </span>
+            </div>
+            <div class="manufacturer" layout="column" layout-align="center start">
                 <div layout="row" layout-align="center center">
-                    <input flex="25" type="number" ng-model="vm.slider.min" maxlength="3" size="1"
-                        aria-label="price-min" aria-controls="price-min">
-                    <span flex="10">
-                        < </span> <input flex="25" type="number" maxlength="3" size="1" ng-model="vm.slider.max"
-                            aria-label="blue" aria-controls="blue-slider">
-                            <md-button class="md-raised md-primary">Search</md-button>
+                    <span class="box"></span>
+                    <span ng-click="vm.selectManufacturer()">MANUFACTURER</span>
+                </div>
+                <div>
+                    <ul class="custom-list">
+                        <li ng-class="vm.getFilterClass(item.name, 'manufacturer')"
+                            ng-click="vm.selectManufacturer(item.name)" ng-repeat="item in vm.sideMenu.manufacturer">
+                            {{item.name | capitalize}}
+                            <span>
+                                ({{ vm.numberOfProds(item) }})
+                            </span>
+                        </li>
+                    </ul>
                 </div>
 
-                <div class="color" layout="column" layout-align="center start">
-                    <div layout="row" layout-align="center center">
-                        <span class="box"></span>
-                        <span ng-click="vm.selectColor()">COLOR</span>
-                    </div>
-                    <div>
-                        <ul class="custom-list">
-                            <li ng-class="vm.getFilterClass(item.name, 'color')" ng-click="vm.selectColor(item.name)"
-                                ng-repeat="item in vm.sideMenu.color">
-                                {{item.name | capitalize}}
-                                <!-- ({{item.value}}) -->
-                                ({{vm.numberOfProds}})
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="colored-title popular-tags" ng-style="{'width':'100%'}" layout="row"
-                    layout-align="start center">
-                    <div class="icon">
-                        <i class="material-icons"> bookmark </i>
-                    </div>
-                    <span ng-click="filterTags()">
-                        POPULAR TAGS
-                    </span>
-                </div>
-                <div class="tags" layout="row" layout-wrap>
-                    <span class="tag-wrapper" ng-class="vm.getTagClass(item.name)" ng-click="vm.filterTags(item.name)"
-                        ng-repeat="item in vm.sideMenu.tags">{{item.name | capitalize}}</span>
-                </div>
-
-                <div class="colored-title compare-products" ng-style="{'width':'100%'}" layout="row"
-                    layout-align="start center">
-                    <div class="icon">
-                        <i class="material-icons"> bookmark </i>
-                    </div>
-                    <span>
-                        COMPARE PRODUCTS
-                    </span>
-                </div>
-                <div class="compare-products-box">
-                    You have no items to compare
+            </div>
+            <div class="price" layout="column" layout-align="center start">
+                <div layout="row" layout-align="center center">
+                    <span class="box"></span>
+                    <span>PRICE</span>
                 </div>
             </div>
-            <div layout="column" flex="60" class="products-container right-container">
-                <div class="header-photo">
+            <!-- <md-slider ng-model="slider.value" min="25" max="500" aria-label="blue" id="blue-slider" class="md-primary">
+                        </md-slider> -->
+            <rzslider rz-slider-model="vm.slider.min" rz-slider-high="vm.slider.max" rz-slider-options="slider.options">
+            </rzslider>
+            <div layout="row" layout-align="center center">
+                <input flex="25" type="number" ng-model="vm.slider.min" maxlength="3" size="1" aria-label="price-min"
+                    aria-controls="price-min">
+                <span flex="10">
+                    < </span> <input flex="25" type="number" maxlength="3" size="1" ng-model="vm.slider.max"
+                        aria-label="blue" aria-controls="blue-slider">
+                        <md-button class="md-raised md-primary">Search</md-button>
+            </div>
 
+            <div class="color" layout="column" layout-align="center start">
+                <div layout="row" layout-align="center center">
+                    <span class="box"></span>
+                    <span ng-click="vm.selectColor()">COLOR</span>
                 </div>
-                <div class="sorting-details">
-
+                <div>
+                    <ul class="custom-list">
+                        <li ng-class="vm.getFilterClass(item.name, 'color')" ng-click="vm.selectColor(item.name)"
+                            ng-repeat="item in vm.sideMenu.color">
+                            {{item.name | capitalize}}
+                            <span>
+                                ({{ vm.numberOfColors(item) }})
+                            </span>
+                        </li>
+                    </ul>
                 </div>
+            </div>
 
-                <div class="products" layout-wrap layout-padding="10" layout="row" layout-align="center center">
-                    <div ng-repeat="product in vm.products 
+            <div class="colored-title popular-tags" ng-style="{'width':'100%'}" layout="row"
+                layout-align="start center">
+                <div class="icon">
+                    <i class="material-icons"> bookmark </i>
+                </div>
+                <span ng-click="filterTags()">
+                    POPULAR TAGS
+                </span>
+            </div>
+            <div class="tags" layout="row" layout-wrap>
+                <span class="tag-wrapper" ng-class="vm.getTagClass(item.name)" ng-click="vm.filterTags(item.name)"
+                    ng-repeat="item in vm.sideMenu.tags">{{item.name | capitalize}}</span>
+            </div>
+
+            <div class="colored-title compare-products" ng-style="{'width':'100%'}" layout="row"
+                layout-align="start center">
+                <div class="icon">
+                    <i class="material-icons"> bookmark </i>
+                </div>
+                <span>
+                    COMPARE PRODUCTS
+                </span>
+            </div>
+            <div class="compare-products-box">
+                You have no items to compare
+            </div>
+        </div>
+        <div layout="column" flex="75" class="products-container right-container">
+            <div class="header-photo">
+
+            </div>
+            <div class="sorting-details" layout="row" style="width:100%" layout-align="space-between center">
+                <div class="view-icons">
+                    <i class="material-icons" ng-click="vm.gridView=true">
+                        view_module
+                    </i>
+                    <i class="material-icons" ng-click="vm.gridView=false">
+                        view_list
+                    </i>
+                </div>
+                <div layout="row" layout-padding="10px">
+                    <div class="show-size">
+                        Show:
+                        <select ng-change="vm.changeSize(vm.currentSize)" ng-model="vm.currentSize" name="size">
+                            <option ng-value="5">5</option>
+                            <option ng-value="10">10</option>
+                            <option ng-value="15">15</option>
+                        </select>
+                    </div>
+                    <div class="sort-by">
+                        Sort by:
+                        <select name="sort-by" ng-model="vm.sortBy">
+                            <option value="name">name</option>
+                            <option value="price">price</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="products" ng-if="vm.gridView" layout-padding="1px" layout-wrap layout="row"
+                layout-align="center center">
+                <div ng-repeat="product in vm.products 
                                 | filter: vm.categoryFilterFn 
                                 | filter: vm.searchTerm 
-                                | filter:vm.categoryChanged 
                                 | filter: vm.colorChanged
-                                | filter: vm.manufacturerChanged 
-                                | range: vm.selectedPage:vm.pageSize 
+                                | filter: vm.manufacturerChanged
+                                | orderBy: vm.sortBy 
+                                | limitTo: vm.currentSize: (vm.selectedPage - 1) * vm.currentSize
                                 | rangeFilter: vm.slider
                                 | filterTag: vm.tagChanged">
-                        <a href="#/products/{{product.id}}">
-                            <div class="photo-container" layout="column" layout-align="center center">
-                                <span class="data-badge">{{product.status}}</span>
-                                <img ng-src="{{product.url}}" class="product-image" height="50px" width="100px" alt="produ{prod>
-                                        <span class=" item-name">{{product.name}}</span>
-                                <!-- <span>{{item.description}}</span> -->
-                                <strong class="item-price">{{product.price | currency}}</strong>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="pagintaion-details">
-                    <a ng-repeat="page in vm.products | filter:vm.categoryFilterFn | filter: vm.searchTerm | pageCount:vm.pageSize"
-                        ng-click="vm.selectPage($index + 1)" class="btn" ng-class="vm.getPageClass($index + 1)">
-                        {{$index + 1}}
+                    <a class="product-link" href="#/products/{{product.id}}">
+                        <div class="photo-container" layout="column" layout-align="center center">
+                            <span ng-style="{'background-color': product.statusColor}" class="data-badge">{{product.status}}</span>
+                            <img ng-src="{{product.url}}" class="product-image" height="50px" width="100px"
+                                alt="{{product.name}}">
+                            <span class="item-name">{{product.name}}</span>
+                            <strong class="item-price">{{product.price | currency}}</strong>
+                        </div>
                     </a>
                 </div>
+
+            </div>
+            <div ng-if="!vm.gridView" class="list-view" layout-padding="1px" layout="column"
+                layout-align="stretch start">
+                <div ng-repeat="product in vm.products 
+                                    | filter: vm.categoryFilterFn 
+                                    | filter: vm.searchTerm 
+                                    | filter: vm.colorChanged
+                                    | filter: vm.manufacturerChanged
+                                    | orderBy: vm.sortBy 
+                                    | limitTo: vm.currentSize: (vm.selectedPage - 1) * vm.currentSize
+                                    | rangeFilter: vm.slider
+                                    | filterTag: vm.tagChanged">
+                    <a class="product-link" href="#/products/{{product.id}}">
+                        <div class="photo-container" layout="column" layout-align="center center">
+                            <span ng-style="{'background-color': product.statusColor}" class="data-badge">{{product.status}}</span>
+                            <img ng-src="{{product.url}}" class="product-image" height="50px" width="100px"
+                                alt="{{product.name}}">
+                            <span class="item-name">{{product.name}}</span>
+                            <strong class="item-price">{{product.price | currency}}</strong>
+                        </div>
+                    </a>
+                </div>
+
             </div>
 
-        </div>
+            <div class="pagination-details-wrapper" style="width:100%" layout="row" layout-align="space-between center">
+                <div class="pagintaion-details" layout="row" layout-align="center center">
+                    <i ng-if="vm.selectedPage > 1" class="material-icons paging-icon" ng-click="vm.selectedPage = 1">
+                        fast_rewind
+                    </i>
+                    <i  ng-if="vm.selectedPage > 1" ng-click="vm.selectedPage =vm.selectedPage - 1" class="material-icons paging-icon">
+                        arrow_left
+                    </i>
+                    <a ng-repeat="page in vm.products | filter:vm.categoryFilterFn | filter: vm.searchTerm | pageCount:vm.currentSize"
+                        ng-click="vm.selectPage($index + 1)" class="btn paging-box"
+                        ng-class="vm.getPageClass($index + 1)">
+                        {{$index + 1}}
+                    </a>
+                    <i ng-if="vm.selectedPage < pages.length" class="material-icons paging-icon" ng-click="vm.selectedPage = vm.selectedPage + 1">
+                        arrow_right
+                    </i>
+                    <i class="material-icons paging-icon" ng-if="vm.selectedPage < pages.length" ng-click="vm.selectedPage = pages.length">
+                        fast_forward
+                    </i>
+                </div>
+                <div class="details">
+                    <span>
+                        Showing {{ (vm.selectedPage - 1) * vm.currentSize + 1}} to
+                        {{vm.selectedPage * vm.currentSize > vm.products.length ? vm.products.length : vm.selectedPage * vm.currentSize }}
+                        of {{vm.products.length}}
+                        ({{ pages =  (vm.products | filter:vm.categoryFilterFn | filter: vm.searchTerm | pageCount:vm.currentSize ); pages.length }}
+                        pages)
+                    </span>
+                </div>
 
-        <div layout-align="center center" class="slick-carousel">
-            <slick default="true" slides-to-show=2 slides-to-scroll=1>
-                <div class="slick-slide"> <img src="/app/assets/footer-city.jpg" height="100px" width="150px" alt=""></div>
-                <div class="slick-slide"> <img src="/app/assets/footer-city.jpg" height="100px" width="150px" alt=""></div>
-                <div class="slick-slide"> <img src="/app/assets/footer-city.jpg" height="100px" width="150px" alt=""></div>
-                <div class="slick-slide"> <img src="/app/assets/footer-city.jpg" height="100px" width="150px" alt=""></div>
-                <div class="slick-slide"> <img src="/app/assets/footer-city.jpg" height="100px" width="150px" alt=""></div>
+            </div>
 
-                <!-- <div class="slick-slide"> </div>
-                <div class="slick-slide"> </div>
-                <div class="slick-slide"> </div>
-                <div class="slick-slide"> </div>
-                
-                <div class="slick-slide"> </div> -->
-
-            </slick>
 
         </div>
     </div>
+    <div class="simple slick-carousel" layout="row" layout-align="center center">
+        <slick default="true" slides-to-show="5" slides-to-scroll="1">
+            <div class="slick-slide"> <img src="/app/assets/footer-city.jpg" alt="">
+            </div>
+            <div class="slick-slide"> <img src="/app/assets/footer-city.jpg" alt="">
+            </div>
+            <div class="slick-slide"> <img src="/app/assets/footer-city.jpg" alt="">
+            </div>
+            <div class="slick-slide"> <img src="/app/assets/footer-city.jpg" alt="">
+            </div>
+            <div class="slick-slide"> <img src="/app/assets/footer-city.jpg" alt="">
+            </div>
+            <div class="slick-slide"> <img src="/app/assets/footer-city.jpg" alt="">
+            </div>
+            <div class="slick-slide"> <img src="/app/assets/footer-city.jpg" alt="">
+            </div>
+            <div class="slick-slide"> <img src="/app/assets/footer-city.jpg" alt="">
+            </div>
+            <div class="slick-slide"> <img src="/app/assets/footer-city.jpg" alt="">
+            </div>
+            <div class="slick-slide"> <img src="/app/assets/footer-city.jpg" alt="">
+            </div>
+
+        </slick>
+    </div>
 
 </div>
+
+
+<!-- </div> -->
